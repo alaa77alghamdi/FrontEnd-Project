@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function FormBooking() {
+export default function SignUp() {
   return (
     <div>
-        FormBooking
+        SignUp
     </div>
   )
 }

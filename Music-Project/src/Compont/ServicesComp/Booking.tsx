@@ -6,8 +6,9 @@ import CardComp from './ElementComp/CardComp'
 
 function Booking( ) {
   return (
-    <Container>
-        <h1 align="center" >Booking</h1> 
+    <Container align="center">
+        <Heading  my='10'>Booking a Musician</Heading> 
+        <Heading size='sm' my='10'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas illum, repudiandae omnis voluptatem impedit provident quaerat sed nostrum reiciendis aspernatur ipsum deleniti laudantium ullam! Tempora, nulla laboriosam. Dolores, nemo ab.</Heading>
         <SimpleGrid spacing={10} >
                 <CardComp/>
         </SimpleGrid>
@@ -16,3 +17,4 @@ function Booking( ) {
 }
 
 export default Booking
+

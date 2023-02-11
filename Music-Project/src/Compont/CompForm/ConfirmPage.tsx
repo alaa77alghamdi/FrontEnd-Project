@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function FormBooking() {
+export default function ConfirmPage() {
   return (
     <div>
-        FormBooking
+        ConfirmPage
     </div>
   )
 }
