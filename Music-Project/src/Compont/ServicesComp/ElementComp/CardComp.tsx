@@ -46,10 +46,11 @@ function CardComp() {
   return (
     <>
     {musicians.map((musician, index)=>{
-        if (index%2 == 0){
+        if (index%2 == 0){// use if to make row reverse 
                 return (
                     <Card 
                             direction={{ base: 'column', sm: 'row' }}
+                            width ={{base: '100%', sm: '600px', lg:'700px' }}
                             overflow='hidden'
                             // variant='outline'
                             boxShadow='xl'
@@ -99,6 +100,8 @@ function CardComp() {
             return (
                 <Card
                         direction={{ base: 'column', sm: 'row-reverse' }}
+                        width ={{base: '100%', sm: '600px', lg:'700px' }}
+
                         overflow='hidden'
                         // variant='outline'
                         boxShadow='xl'
