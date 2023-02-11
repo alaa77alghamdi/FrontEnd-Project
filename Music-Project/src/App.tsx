@@ -3,13 +3,15 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Booking from './Compont/ServicesComp/Booking'
 import Learning from './Compont/ServicesComp/Learning'
+import Store from './Compont/ServicesComp/Store'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Learning/>
+      <Store/>
+      {/* <Learning></Learning> */}
     </div>
   )
 }
