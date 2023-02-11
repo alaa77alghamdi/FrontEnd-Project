@@ -4,7 +4,7 @@ import { Card,
         CardBody, CardFooter, Stack, Image, Heading, Text,Button, ListItem, List,} from '@chakra-ui/react'
 
 
-function CardComp() {
+function BookingCard() {
     let musicians= [
         {
             id:1,
@@ -156,4 +156,4 @@ function CardComp() {
   )
 }
 
-export default CardComp
+export default BookingCard
