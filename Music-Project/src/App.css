@@ -17,7 +17,7 @@ nav {
   padding:14px;
   position: fixed;
   top: 0;
-  left: 0vh;
+  left: 0px;
   right: 0px;
   z-index: 1;
 }
@@ -112,19 +112,20 @@ footer ul {
 footer li {  
   padding: 9px 9px 6px 9px;
   background-color: rgba(255, 255, 255, 0.554);
-  border-radius: 50%;}
+  border-radius: 50%;
+}
 
 /*-------------------------------HOME-------------------------------*/
 /*----------header----------*/
 .headerBg {
-  height: 100vh; 
+  height: 100vh;
   background-image: url('./assets/header.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .headerContent {
-  position: relative;
+  position: absolute;
   top: 200px;
   left: 150px;
 }
@@ -151,10 +152,47 @@ footer li {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/*----------service section----------*/
+/*----------about section----------*/
 main {
-  padding: 100px;
   background-color:#f3f1e8;
+  padding-top: 100px;
+}
+.aboutSectionBg {
+  background-image: url('../src/assets/aboutSectionImg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.aboutSection {
+  height: 50vh;
+  background-color: #221409ae;
+  padding: 40px 200px;
+  text-align: center;
+  color: white;
+}
+.aboutSection h2  {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 50px;
+  font-weight:500;
+}
+.aboutSection i  {
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.aboutSection button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/*----------service section----------*/
+.serviceSectionContainer {
+  padding: 100px
 }
 .serviceSection {
   display: grid;
@@ -189,8 +227,43 @@ main {
 }
 
 
-/*----------section----------*/
-
+/*----------news letter section----------*/
+.newsLetterSectionContainer {
+  padding-bottom: 100px;
+}
+.newsLetterSection {
+  background-color: #221409d6;
+  margin: auto;
+  padding: 30px;
+  padding-bottom: 70px;
+  width: 100vh;
+  height: 30vh;
+  text-align: center;
+  color: white;
+}
+.newsLetterSection h2 {
+  font-size: 45px;
+  letter-spacing: 20px;
+}
+.newsLetterSection input {
+  text-align: center;
+  padding: 12px 100px;
+  border: none;
+  border-radius: 2px;
+  margin: 15px;
+}
+.newsLetterSection input:focus {
+  outline: 1px dotted #221409d2;
+}
+.newsLetterSection button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  color: white;
+}
 
 /*-------------------------------SING UP & LOG IN-------------------------------*/
 .mainlogIn{
