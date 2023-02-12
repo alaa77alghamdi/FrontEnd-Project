@@ -1,42 +1,251 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*-------------------------------NAV-------------------------------*/
+nav {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  background-color: #221409d2;
+  padding:14px;
+  position: fixed;
+  top: 0;
+  left: 0vh;
+  right: 0px;
+  z-index: 1;
+}
+.navBar {
+  display: flex;
+  justify-content:left;
+}
+.navBar img {
+  width: 120px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+.navBar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: white;
+}
+.navBar a:hover, .dropdown:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*----------dropdown----------*/
+.dropdown {
+  cursor: pointer;
+}
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top:60px;
+  left: 260px;
+  cursor: pointer;
+  background-color: #221409d2;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdownContent a {
+  float: none;
+  color: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdownContent a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/*----------login & singup btn----------*/
+.btnNav button{
+  margin-right: 20px;
+  padding: 7px 18px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  gap:8px;
+  color: white;
+  background-color: inherit;
+  font-family: 'Quicksand', sans-serif;
+}
+.btnNav button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*-------------------------------FOOTER-------------------------------*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #221409;
+  padding: 3px;
+  font-size: 16px;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: white;  
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+footer li {  
+  padding: 9px 9px 6px 9px;
+  background-color: rgba(255, 255, 255, 0.554);
+  border-radius: 50%;}
+
+/*-------------------------------HOME-------------------------------*/
+/*----------header----------*/
+.headerBg {
+  height: 100vh; 
+  background-image: url('./assets/header.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.headerContent {
+  position: relative;
+  top: 200px;
+  left: 150px;
+}
+.headerContent div  {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 150px;
+  color: white;
+  font-weight:900;
+}
+.headerContent i  {
+  font-weight:500;
+  color: rgba(255, 255, 255, 0.7);
+}
+.headerContent button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  font-weight: 600;
+}
+.headerContent button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*----------service section----------*/
+main {
+  padding: 100px;
+  background-color:#f3f1e8;
+}
+.serviceSection {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 80vh;
+}
+.serviceSection .right {
+  text-align: right;
+  padding-right: 110px;
+}
+.serviceSection button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #221409;
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.serviceSection h2 {
+  font-size: 35px;
+}
+.serviceSection p {
+  font-size: 18px;
+}
+.serviceSection img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  height: 380px;
+  width: 500px;
+}
+
+
+/*----------section----------*/
+
+
+/*-------------------------------SING UP & LOG IN-------------------------------*/
+.mainlogIn{
+  background-color:#e9e2da;
+  background-image: url('');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.logIn-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logIn-fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 120px;
+  background-color: #ffffff62;
+  border: none;
+  font-size: 25px;
+}
+.logIn-fieldset input {
   text-align: center;
+  padding: 12px 30px;
+  border: none;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.logIn-fieldset input:focus {
+  outline: 1px dotted #221409d2;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.logIn-fieldset a {
+  text-align: center;
+  font-size: 15px;
+  color: #221409d2;
+  text-decoration: none;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logIn-fieldset button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #221409;
+  font-size: 13px;
+  color: white;
+  margin-top: 20px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/*-------------------------------Responsive-------------------------------*/
+@media only screen and (max-width: 700px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
