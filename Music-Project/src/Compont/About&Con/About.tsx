@@ -1,106 +1,133 @@
-import { Box, Center, Container, Flex, Heading, Stack, Text ,Image} from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  Image,
+  chakra,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import React from "react";
 
 function About() {
   return (
     <>
-      <Stack
-        textAlign={"center"}
-        align={"center"}
-        spacing={{ base: 8, md: 10 }}
-     
+       <SimpleGrid
+      columns={{ base: 1, md: 2 }}
+      spacing={0}
+      bg="blue.100"
+      _after={{
+        bg: "brand.500",
+        opacity: 0.25,
+        pos: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        zIndex: -1,
+        content: '" "',
+      }}
+    >
+      <Flex
+        direction="column"
+        alignItems="start"
+        justifyContent="center"
+        px={{ base: 4, lg: 20 }}
+        py={24}
       >
-<Heading
-          fontWeight={600}
-          fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
-          lineHeight={'110%'}>
-          About {' '}
-
-
-
-          <Text as={'span'} color={'blue.400'}>
-          US
-          </Text>
-        </Heading>
-
-        <Text color={'black.500'} maxW={'3xl'}   fontWeight={600} >
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Voluptatem, perspiciatis incidunt enim minima ratione ipsa aliquid quae odio, 
-         adipisci quidem, suscipit culpa? Commodi, ea debitis accusantium quis odio temporibus atque?
-         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ut eum consequatur
-          animi doloribus dolorem inventore minus, 
-         aliquam amet dolor ullam aut porro odit pariatur neque asperiores! Optio, ut error?
-        </Text>
-
-        <Stack spacing={10} direction={'row'}>
-
-
-        <Flex w={''}>
+       
+        <chakra.h1
+          mb={6}
+          fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}
+          fontWeight="bold"
+          color="brand.600"
+          _dark={{ color: "gray.300" }}
+          lineHeight="shorter"
+        >
+      About US
+        </chakra.h1>
+       
+        <chakra.p
+          pr={{ base: 0, lg: 16 }}
+          mb={4}
+          fontSize="20"
+          color="brand.600"
+          _dark={{ color: "gray.400" }}
+          letterSpacing="wider"
+        >
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Eum animi voluptate deleniti praesentium est, aliquam sapiente 
+    laborum culpa eos consequuntur alias modi exercitationem, 
+    rerum ea explicabo assumenda ipsam mollitia totam.
+        </chakra.p>
+      </Flex>
+      <Box>
         <Image
-    
-    objectFit='cover'
-    src='https://img.freepik.com/free-photo/blue-painted-vinyl-arrangement-with-musical-notes_23-2148785726.jpg?w=996&t=st=1676051047~exp=1676051647~hmac=672353c95bcca27d0ff833606406862bce35421dabacd0bebec9f4eeb5c524cc'
- />
-        </Flex>
+          src="https://img.freepik.com/free-photo/top-view-black-vinyl-composition-with-blue-piano_23-2148785740.jpg?w=1060&t=st=1676147229~exp=1676147829~hmac=c5db49d0d2ba2f513f522178ddd08084db5afc426b3393344dcc8c0d8ec4b13c"
+          alt="3 women looking at a laptop"
+          fit="cover"
+          w="full"
+          h={{ base: 64, md: "full" }}
+          bg="gray.100"
+          loading="lazy"
+        />
+      </Box>
+    </SimpleGrid>
+      
+      <Stack padding={50} alignItems="center" gap={10}>
+        <Heading textAlign={"center"}>Team</Heading>
+
+        <Stack direction="row" gap="20" >
+          <Box>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src="https://bit.ly/dan-abramov"
+              
+              alt="Dan Abramov"
+            />
+            <Text textAlign={"center"} padding={2}>
+              alaa
+            </Text>
+          </Box>
+          <Box>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src="https://bit.ly/dan-abramov"
+              alt="Dan Abramov"
+            />
+            <Text textAlign={"center"} padding={2}>
+              alaa
+            </Text>
+          </Box>
+          <Box>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src="https://bit.ly/dan-abramov"
+              alt="Dan Abramov"
+            />
+            <Text textAlign={"center"} padding={2}>
+              alaa
+            </Text>
+          </Box>
+          <Box>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src="https://bit.ly/dan-abramov"
+              alt="Dan Abramov"
+            />
+            <Text textAlign={"center"} padding={2}>
+              alaa
+            </Text>
+          </Box>
         </Stack>
       </Stack>
-
-<Stack padding={55}>
-      <Heading 
-        textAlign={"center"}
-      >Team</Heading>
-
-<Stack direction='row'  alignItems={"center"}  >
-
-
-<Stack  >
-<Image
-
-  borderRadius='full'
-  boxSize='150px'
-  src='https://bit.ly/dan-abramov'
-  alt='Dan Abramov'
-  
-/>
-<Text textAlign={"center"} padding={2}>alaa</Text>
-</Stack>
-<Stack >
-<Image
-
-  borderRadius='full'
-  boxSize='150px'
-  src='https://bit.ly/dan-abramov'
-  alt='Dan Abramov'
-  
-/>
-<Text textAlign={"center"} padding={2}>alaa</Text>
-</Stack>
-<Stack >
-<Image
-
-  borderRadius='full'
-  boxSize='150px'
-  src='https://bit.ly/dan-abramov'
-  alt='Dan Abramov'
-  
-/>
-<Text textAlign={"center"} padding={2}>alaa</Text>
-</Stack>
-<Box >
-<Image
-
-  borderRadius='full'
-  boxSize='150px'
-  src='https://bit.ly/dan-abramov'
-  alt='Dan Abramov'
-  
-/>
-<Text textAlign={"center"} padding={2}>alaa</Text>
-</Box>
-
-</Stack>
-</Stack>
-
     </>
   );
 }

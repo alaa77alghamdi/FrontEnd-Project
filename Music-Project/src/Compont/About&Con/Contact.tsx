@@ -1,3 +1,4 @@
+
 import { Fragment } from 'react';
 import {
   Container,
@@ -40,7 +41,7 @@ const contactOptions = [
 
 const Contact = () => {
   return (
-    <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
+    <Container py={10} >
       <Stack spacing={10}>
         <Flex align="center" justify="center" direction="column">
           <Heading fontSize="4xl" mb={2}>
@@ -50,35 +51,12 @@ const Contact = () => {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
           </Text>
         </Flex>
-        <Stack
-          spacing={{ base: 6, md: 0 }}
-          direction={{ base: 'column', md: 'row' }}
-          justify="space-between"
-        >
-          {contactOptions.map((option, index) => (
-            <Fragment key={index}>
-              <Stack spacing={3} direction="column" justify="center" alignItems="center" px={3}>
-                <Icon as={option.icon} w={10} h={10} color="green.400" />
-                <Text fontSize="lg" fontWeight="semibold">
-                  {option.label}
-                </Text>
-                <Text fontSize="md" textAlign="center">
-                  {option.value}
-                </Text>
-              </Stack>
-              {contactOptions.length - 1 !== index && (
-                <Flex d={{ base: 'none', md: 'flex' }}>
-                  <Divider orientation="vertical" />
-                </Flex>
-              )}
-            </Fragment>
-          ))}
-        </Stack>
+       
         <VStack
           as="form"
           spacing={8}
           w="100%"
-          bg={useColorModeValue('white', 'gray.700')}
+          bg={"gray.100"}
           rounded="lg"
           boxShadow="lg"
           p={{ base: 5, sm: 10 }}
@@ -105,10 +83,10 @@ const Contact = () => {
           </VStack>
           <VStack w="100%">
             <Button
-              bg="green.300"
+              bg="blue.300"
               color="white"
               _hover={{
-                bg: 'green.500'
+                bg: 'blue.500'
               }}
               rounded="md"
               w={{ base: '100%', md: 'max-content' }}
