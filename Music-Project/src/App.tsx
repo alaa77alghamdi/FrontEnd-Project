@@ -10,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Store/>
-      {/* <Learning></Learning> */}
+    
     </div>
   )
 }
