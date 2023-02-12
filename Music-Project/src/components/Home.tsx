@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import bookMusician from '../assets/bookMusician.jpeg'
@@ -23,6 +23,16 @@ export default function Home() {
   }
   const MusicalInstruments =()=>{
     navigate("/musicalInstruments")    
+  }
+  const [ email , setEmail ] = useState<any>()
+  const HomePage =()=>{
+    if(email == null) {
+      alert("Please, type an email for subscribe our news letter!")
+    } else {
+      alert("Thank You For Subscribing!")
+      document.documentElement.scrollTop = 0; 
+      location.reload();
+    }  
   }
   return (
     <div>
@@ -54,11 +64,12 @@ export default function Home() {
 
         {/*----------service divs----------*/}   
         <section className='serviceSectionContainer'>
+          <h2>OUR SERVICES</h2>
 
           <div className='serviceSection'>
             <img src={musicEducation} alt="" />
             <div className='serviceContent'>
-              <h2>Music Education</h2>
+              <h4>Music Education</h4>
               <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
@@ -71,7 +82,7 @@ export default function Home() {
 
           <div className='serviceSection'>
             <div className='serviceContent right'>
-              <h2>Book A Musician</h2>
+              <h4>Book A Musician</h4>
               <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
@@ -86,7 +97,7 @@ export default function Home() {
           <div className='serviceSection'>
             <img src={musicalInstruments} alt="" />
             <div className='serviceContent'>
-              <h2>Musical Instruments</h2>
+              <h4>Musical Instruments</h4>
               <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
@@ -103,8 +114,8 @@ export default function Home() {
           <div className='newsLetterSection'>
             <h2>NEWS LETTER</h2>
             <p>Keep up our latest news. Subscribe our news letter </p>
-            <input type='email' placeholder='Enter Your Email..' ></input>
-            <button>SUBSCRIBE</button>
+            <input type='email' placeholder='Enter Your Email..' onChange={e =>{setEmail(e.target.value)}}></input>
+            <button onClick={HomePage}>SUBSCRIBE</button>
           </div> 
         </section>
 

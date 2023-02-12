@@ -15,6 +15,7 @@ export default function LogIn() {
           alert("Please, enter the correct information.")
       }else{
           alert("Please, create a new account.")
+          navigate("/signUp")
       }
   }
   const SignUp =()=>{
@@ -26,8 +27,8 @@ export default function LogIn() {
           <div className='logIn-form'>
               <fieldset className='logIn-fieldset'>  
                   LOG IN 
-                  <input placeholder='Full Name' onChange={e =>{setName(e.target.value)}} ></input>
-                  <input placeholder='password' type='password' onChange={e =>{setPass(e.target.value)}}></input>
+                  <input placeholder='User Name' onChange={e =>{setName(e.target.value)}} ></input>
+                  <input placeholder='Password' type='password' onChange={e =>{setPass(e.target.value)}}></input>
                   <button type='submit' onClick={getInfo}>Log In</button>
                   <a href="" onClick={SignUp}>* create a new account?</a>
               </fieldset> 
