@@ -2,9 +2,9 @@ import React from 'react'
 import { Card,
         CardHeader,
         CardBody, CardFooter, Stack, Image, Heading, Text,Button, ListItem, List,} from '@chakra-ui/react'
+import '../Services.css'
 
-
-function CardComp() {
+function BookingCard() {
     let musicians= [
         {
             id:1,
@@ -46,25 +46,28 @@ function CardComp() {
   return (
     <>
     {musicians.map((musician, index)=>{
-        if (index%2 == 0){
+        if (index%2 == 0){// use if to make row reverse 
                 return (
                     <Card 
                             direction={{ base: 'column', sm: 'row' }}
+                            width ={{base: '100%', sm: '600px', lg:'700px' }}
                             overflow='hidden'
                             // variant='outline'
                             boxShadow='xl'
                             gap={10}
+                            bg='#f3f1e8'
                             >
                             <Image
                                 objectFit='cover'
                                 borderRadius='lg'
-                                maxW={{ base: '100%', sm: '220px' }}
+                                maxW={{ base: '100%', sm: '320px' }}
                                 maxH={{ base: '250px', sm: '100%'}}
                                 src={musician.image}
                                 alt='Caffe Latte'
                             />
         
-                            <Stack align='center'>
+                            <Stack align='center'
+                            >
                                 <CardBody align='center'>
                                 <Heading size='md'>{musician.name}</Heading>
         
@@ -88,7 +91,11 @@ function CardComp() {
                                 </CardBody>
         
                                 <CardFooter>
-                                <Button variant='solid' colorScheme='blue'>
+                                <Button variant='solid' bg='#221409'
+                                color='white'
+                                py='5'
+                                px='5'
+                                _hover={{ bg: '#221409' }}>
                                     Booking
                                 </Button>
                                 </CardFooter>
@@ -99,15 +106,19 @@ function CardComp() {
             return (
                 <Card
                         direction={{ base: 'column', sm: 'row-reverse' }}
+                        width ={{base: '100%', sm: '600px', lg:'700px' }}
+
                         overflow='hidden'
                         // variant='outline'
                         boxShadow='xl'
                         gap={10}
+                        bg='#f3f1e8'
+
                         >
                         <Image
                             objectFit='cover'
                             borderRadius='lg'
-                            maxW={{ base: '100%', sm: '220px' }}
+                            maxW={{ base: '100%', sm: '320px' }}
                             maxH={{ base: '250px', sm: '100%'}}
                             src={musician.image}
                             alt='Caffe Latte'
@@ -138,7 +149,11 @@ function CardComp() {
                             </CardBody>
     
                             <CardFooter alignItems='left'>
-                            <Button variant='solid' colorScheme='blue'>
+                            <Button variant='solid' bg='#221409'
+                            color='white'
+                            py='5'
+                            px='5'
+                            _hover={{ bg: '#221409' }}>
                                 Booking
                             </Button>
                             </CardFooter>
@@ -153,4 +168,4 @@ function CardComp() {
   )
 }
 
-export default CardComp
+export default BookingCard

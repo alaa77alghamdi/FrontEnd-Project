@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import Booking from './Compont/ServicesComp/Booking'
+import Footer from './components/Footer'
+import Nav from './components/Nav'
+import Routes from './components/Routes'
+import Booking from './components/ServicesComp/Booking'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Booking/>
+      <Nav />
+      <Routes />
+      <Footer />
     </div>
   )
 }
