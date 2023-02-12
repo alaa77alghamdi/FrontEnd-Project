@@ -26,7 +26,7 @@ function LearningCard() {
         },
         {
             id:2,
-            image:"https://images.unsplash.com/photo-1666705752155-b32e282bc50c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60",
+            image:"https://images.unsplash.com/photo-1501492765677-f07c5f3d87db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60",
             name: "Jorej Michle",
             instruments:"Paino, Getar",
             Description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
@@ -48,24 +48,25 @@ function LearningCard() {
     {instructors.map((instructor, index)=>{
         return (
             <Card 
-                    direction={{ base: 'column', sm: 'row' }}
-                    width ={{base: '100%', sm: '600px', lg:'700px' }}
-                    overflow='hidden'
-                    // variant='outline'
-                    boxShadow='xl'
-                    gap={10}
-                    >
-                    <Image
-                        objectFit='cover'
-                        borderRadius='lg'
-                        maxW={{ base: '100%', sm: '220px' }}
-                        maxH={{ base: '250px', sm: '100%'}}
-                        src={instructor.image}
-                        alt='Caffe Latte'
-                    />
+                            direction={{ base: 'column', sm: 'row' }}
+                            width ={{base: '100%', sm: '730px', lg:'1000px' }}
+                            overflow='hidden'
+                            // variant='outline'
+                            boxShadow='xl'
+                            gap={20}
+                            bg='#f3f1e8'
+                            >
+                            <Image
+                                objectFit='cover'
+                                borderRadius='lg'
+                                maxW={{ base: '100%', sm: '320px' }}
+                                maxH={{ base: '250px', sm: '100%'}}
+                                src={instructor.image}
+                                alt='Caffe Latte'
+                            />
 
                     <Stack align='center'>
-                        <CardBody align='center'>
+                        <CardBody align='center' width='500px'>
                         <Heading size='md'>{instructor.name}</Heading>
 
                         <Text py='2'>
@@ -88,9 +89,13 @@ function LearningCard() {
                         </CardBody>
 
                         <CardFooter>
-                        <Button variant='solid' colorScheme='blue'>
-                            Booking
-                        </Button>
+                        <Button variant='solid' bg='#221409'
+                                color='white'
+                                py='7'
+                                px='5'
+                                _hover={{ bg: '#221409' }}>
+                                    Booking a Lesson
+                                </Button>
                         </CardFooter>
                     </Stack>
                 </Card>

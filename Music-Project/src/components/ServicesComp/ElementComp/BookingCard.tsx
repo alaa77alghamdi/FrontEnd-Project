@@ -29,7 +29,7 @@ function BookingCard() {
             image:"https://images.unsplash.com/photo-1501492765677-f07c5f3d87db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60",
             name: "Jorej Michle",
             instruments:"Paino, Getar",
-            Description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
+            Description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga adipisicing elit. Tenetur quasi incidunt laboriosam ",
             AvailableTime: "Thursday, Wednesday, Friday",
             Price:"100SAR per hour"
         },
@@ -54,7 +54,7 @@ function BookingCard() {
                             overflow='hidden'
                             // variant='outline'
                             boxShadow='xl'
-                            gap={10}
+                            gap={20}
                             bg='#f3f1e8'
                             >
                             <Image
@@ -68,7 +68,7 @@ function BookingCard() {
         
                             <Stack align='center'
                             >
-                                <CardBody align='center'>
+                                <CardBody align='center' width='500px'>
                                 <Heading size='md'>{musician.name}</Heading>
         
                                 <Text py='2'>
@@ -110,7 +110,7 @@ function BookingCard() {
                         overflow='hidden'
                         // variant='outline'
                         boxShadow='xl'
-                        gap={10}
+                        gap={20}
                         bg='#f3f1e8'
 
                         >
@@ -125,7 +125,8 @@ function BookingCard() {
     
                         <Stack align='center'>
                             <CardBody 
-                            align='center'>
+                            align='center'
+                            width='500px'>
                             <Heading size='md'>{musician.name}</Heading>
     
                             <Text py='2'>

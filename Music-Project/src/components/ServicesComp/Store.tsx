@@ -43,21 +43,26 @@ export default function Store() {
   ]
 
   return (
-    <>
- <Container align='center' maxW={{md:'container.md', lg:'container.xl'}} >
-       <Heading  my='10'> Instruments Store </Heading> 
-        <Heading size='sm' my='10' w={{lg:'70%'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas illum, repudiandae omnis voluptatem impedit provident quaerat sed nostrum reiciendis aspernatur ipsum deleniti laudantium ullam! Tempora, nulla laboriosam. Dolores, nemo ab.</Heading>
-      <SimpleGrid columns={{ base: '1', md: '2', lg: '3' }}>
-        {
-          places.map(place =>{
-            return(
-              <StoreCard img={place.img} name={place.name} desc={place.desc} price={place.price}/>
-            )
-          })
-        }
-      </SimpleGrid>
+    <Box className='services'>
+     <div className="header3" >
+      <div className="headerContent1">
+        <h1 className='title1' >Musical Instruments</h1> 
+            <h2 className='description1' >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas illum, repudiandae omnis voluptatem impedit provident quaerat sed nostrum reiciendis aspernatur ipsum deleniti laudantium ullam! </h2>
+            </div>
+          
+      </div>
+      <Container align='center' maxW={{md:'container.md', lg:'container.xl'}} >
+            <SimpleGrid columns={{ base: '1', md: '2', lg: '3' }}>
+              {
+                places.map(place =>{
+                  return(
+                    <StoreCard img={place.img} name={place.name} desc={place.desc} price={place.price}/>
+                  )
+                })
+              }
+            </SimpleGrid>
       </Container>
+      </Box>
 
-    </>
   )
 }

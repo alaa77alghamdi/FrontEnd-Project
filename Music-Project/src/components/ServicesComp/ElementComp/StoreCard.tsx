@@ -24,13 +24,14 @@ import {
         <Box
           role={'group'}
           p={6}
-          maxW={'370px'}
+          maxW={'350px'}
           w={'full'}
-          bg={useColorModeValue('white', 'gray.800')}
-          boxShadow={'xl'}
+          // bg={useColorModeValue('white', 'gray.800')}
+          bg='#f3f1e8'
+          boxShadow={'2xl'}
           rounded={'lg'}
           pos={'relative'}
-          zIndex={1}>
+          zIndex={0}>
           <Box
             rounded={'lg'}
             mt={-12}
@@ -67,16 +68,20 @@ import {
              {name}
             </Heading>
             <Stack direction={'row'} align={'center'}>
-              <Text  color={'gray.600'} w={'300px'}>
+              <Text  color={'gray.600'} w={'200px'}>
               {desc}
               </Text>
             </Stack>
             <Text fontWeight={400} fontSize={'xl'}>
                 Price: <i>{price}</i>
               </Text>
-              <Button variant='solid' colorScheme='blue' px='6'>
-            Buy
-            </Button>
+              <Button variant='solid' bg='#221409'
+                                color='white'
+                                py='6'
+                                px='8'
+                                _hover={{ bg: '#221409' }}>
+                                    Buy
+                                </Button>
           </Stack>
           
         </Box>
