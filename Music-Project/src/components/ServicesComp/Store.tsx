@@ -20,7 +20,8 @@ export default function Store() {
               {
                 instruments.map(instrument =>{
                   return(
-                    <StoreCard img={instrument.img} name={instrument.name} desc={instrument.desc} price={instrument.price}/>
+                    <StoreCard img={instrument.img} name={instrument.name} desc={instrument.desc} price={instrument.price}
+                    />
                   )
                 })
               }
