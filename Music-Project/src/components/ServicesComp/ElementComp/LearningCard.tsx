@@ -9,11 +9,13 @@ function LearningCard() {
     const [instructors, setInstructors]= React.useState(instructorList)
     const navigate = useNavigate()
 
-    const checkLogIn =()=>{
+    const checkLogIn =(name:string,price:any, img:string )=>{
         if (localStorage.getItem("name") != null){
             //redirect to form
             navigate('/learningFom')
-            
+            localStorage.setItem("instructorName",name )
+            localStorage.setItem("instructorPrice",price )
+            localStorage.setItem("instructorImage",img )
         }else{
             //redirect to logIn
             navigate('/logIn')
@@ -60,14 +62,19 @@ function LearningCard() {
                             </ListItem>
                             <ListItem >
                                 <Heading size='sm'>Price: </Heading> 
-                                {instructor.Price}
+                                {instructor.Price}SAR per hour
                             </ListItem>
                         </List>
                         </CardBody>
 
                         <CardFooter>
                         <Button 
-                        onClick={checkLogIn}
+                        onClick={()=>
+                            checkLogIn(
+                                instructor.name,
+                                instructor.Price,
+                                instructor.image
+                                )}
                         variant='solid' 
                         bg='#221409'
                         color='white'

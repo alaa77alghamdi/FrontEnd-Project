@@ -8,9 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 function BookingCard() {
     const [musicians, setMusicians]= React.useState(musiciansList)
-
-
-
     const navigate = useNavigate()
 
     const checkLogIn =(name:string,price:any, img:string )=>{
@@ -79,7 +76,7 @@ function BookingCard() {
                                 onClick={()=>
                                     checkLogIn(
                                         musician.name,
-                                        musician.price,
+                                        musician.Price,
                                         musician.image
                                         )}
                                 variant='solid' 
@@ -135,7 +132,7 @@ function BookingCard() {
                                     </ListItem>
                                     <ListItem >
                                         <Heading size='sm'>Price: </Heading> 
-                                        {musician.Price}
+                                        {musician.Price}SAR per hour
                                     </ListItem>
                                 </List>
                             </CardBody>
