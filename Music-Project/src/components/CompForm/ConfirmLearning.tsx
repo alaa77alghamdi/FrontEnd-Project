@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-export default function ConfirmPage() {
-	const name=localStorage.getItem('name')
+function ConfirmLearning() {
+    const name=localStorage.getItem('name')
 	const location =localStorage.getItem('location')
 	const event =localStorage.getItem('event')
 	const time =localStorage.getItem('time')	
@@ -19,7 +19,7 @@ export default function ConfirmPage() {
 					<div className="booking-form">
 						<div className="booking-bg">
 							<div className="form-header">
-								<h2>BOOKING A MUSIC</h2>
+								<h2>EDUCATION A MUSIC</h2>
 								<p>- Your reservation has been confirmed successfully </p>
 							</div>
 						</div>
@@ -46,3 +46,5 @@ export default function ConfirmPage() {
     </div>
   )
 }
+
+export default ConfirmLearning

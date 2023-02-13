@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import ConfirmPage from './components/CompForm/ConfirmPage'
+import FormBooking from './components/CompForm/FormBooking'
+import FormLearing from './components/CompForm/FormLearing'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
 import Routes from './components/Routes'
@@ -9,6 +12,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* <FormBooking/>
+      <FormLearing/>
+      <ConfirmPage/> */}
       <Nav />
       <Routes />
       <Footer />
