@@ -19,14 +19,14 @@ import {
 
  }
   
-  export default function ProductSimple({img, name, desc, price}:CardProp ) {
+  export default function ProductSiple({img, name, desc, price}:CardProp ) {
     const navigate = useNavigate()
 
     const checkLogIn =()=>{
       if (localStorage.getItem("name") != null){
           //redirect to profile
           navigate('/profile')
-          localStorage.setItem("nameInstrument", name)
+          localStorage.setItem("nameInstrumemt", name)
           localStorage.setItem("img", img)
           localStorage.setItem("desc", desc)
           localStorage.setItem("price", price)
