@@ -34,6 +34,7 @@ function LearningCard() {
                             boxShadow='xl'
                             gap={20}
                             bg='#f3f1e8'
+                            mb='20'
                             >
                             <Image
                                 objectFit='cover'
