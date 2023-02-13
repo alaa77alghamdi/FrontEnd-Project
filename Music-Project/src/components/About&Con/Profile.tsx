@@ -23,10 +23,11 @@ export default function SocialProfileWithImage() {
   const time = localStorage.getItem("time");
   const note = localStorage.getItem("note");
   const nameInstrumemt = localStorage.getItem("nameInstrumemt");
-  const price = localStorage.getItem("instructorPrice");
+  const instructorPrice = localStorage.getItem("instructorPrice");
   const musicianPrice = localStorage.getItem("musicianPrice");
   const musicianName = localStorage.getItem("musicianName");
   const instructorName = localStorage.getItem("instructorName");
+  const price = localStorage.getItem("price");
 
   const navigate = useNavigate();
 
@@ -97,10 +98,10 @@ export default function SocialProfileWithImage() {
 
             <Stack direction={"row"} justifyContent={"center"}>
               <Stack  fontFamily= 'Quicksand, sans-serif;'>
-                {localStorage.getItem("instructorName") != null ? (
+                {localStorage.getItem("musicianName") != null ? (
                   <Text fontSize={"20"} >
                     Booking: <br></br>
-                    instructor Name:{"   "} {"  "} {instructorName}
+                    instructor Name:{"   "} {"  "} {musicianName}
                     <br></br>
                     location: {"   "}
                     {"  "}
@@ -113,6 +114,7 @@ export default function SocialProfileWithImage() {
                     <br></br>
                     note:{"   "} {"  "}
                     {note}
+                    price: {musicianPrice}
                   </Text>
                 ) : null}
                 <br></br>
@@ -120,19 +122,19 @@ export default function SocialProfileWithImage() {
                   <Text fontSize={"22"} color={"black.100"}>
                     Store:
                     <br></br>
-                    name:{nameInstrumemt}
+                    name: {"   "} {"  "}{nameInstrumemt}
                     <br></br>
-                    price:{price}
+                    price: {"   "} {"  "}{price}
                   </Text>
                 ) : null}
 
-                {localStorage.getItem("") != null ? (
-                  <Text fontSize={"20"} color={"gray.500"}>
+                {localStorage.getItem("instructorName") != null ? (
+                  <Text fontSize={"20"} color={"black.100"}>
                     Learing:
                     <br></br>
-                    name:{musicianPrice}
+                    name: {"   "} {"  "}{instructorName}
                     <br></br>
-                    price:{musicianPrice}
+                    price: {"   "} {"  "}{price}
                   </Text>
                 ) : null}
 
