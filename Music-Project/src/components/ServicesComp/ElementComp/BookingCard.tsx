@@ -7,13 +7,16 @@ import musiciansList from './Musicians.json'
 import { useNavigate } from 'react-router-dom';
 
 function BookingCard() {
-    const [musicians, setMusician]= React.useState(musiciansList)
+    const [musicians, setMusicians]= React.useState(musiciansList)
     const navigate = useNavigate()
 
-    const checkLogIn =()=>{
+    const checkLogIn =(name:string,price:any, img:string )=>{
         if (localStorage.getItem("name") != null){
             //redirect to form
             navigate('/bookingFom')
+            localStorage.setItem("musicianName",name )
+            localStorage.setItem("musicianPrice",price )
+            localStorage.setItem("musicianImage",img )
             
         }else{
             //redirect to logIn
@@ -22,7 +25,7 @@ function BookingCard() {
     }
   return (
     <>
-    {musicians.map((musician, index)=>{
+    {musicians.map((musician:any, index)=>{
         if (index%2 == 0){// use if to make row reverse 
                 return (
                     <Card 
@@ -62,14 +65,20 @@ function BookingCard() {
                                     </ListItem>
                                     <ListItem >
                                         <Heading size='sm'>Price: </Heading> 
-                                        {musician.Price}
+                                        {musician.Price}SAR per hour
                                     </ListItem>
                                 </List>
                                 </CardBody>
         
                                 <CardFooter>
+                                
                                 <Button 
-                                onClick={checkLogIn}
+                                onClick={()=>
+                                    checkLogIn(
+                                        musician.name,
+                                        musician.Price,
+                                        musician.image
+                                        )}
                                 variant='solid' 
                                 bg='#221409'
                                 color='white'
@@ -123,14 +132,18 @@ function BookingCard() {
                                     </ListItem>
                                     <ListItem >
                                         <Heading size='sm'>Price: </Heading> 
-                                        {musician.Price}
+                                        {musician.Price}SAR per hour
                                     </ListItem>
                                 </List>
                             </CardBody>
     
                             <CardFooter alignItems='left'>
                             <Button 
-                            onClick={checkLogIn}
+                            onClick={()=>checkLogIn
+                                (musician.name,
+                                musician.price,
+                                musician.image
+                                )}
                             variant='solid' 
                             bg='#221409'
                             color='white'

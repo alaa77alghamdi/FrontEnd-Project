@@ -6,7 +6,7 @@
         "instruments":"Paino, Getar",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
-        "Price":"100SAR per hour"
+        "Price":100
     },
     {
         " id":2,
@@ -15,7 +15,7 @@
         "instruments":"Paino, Getar",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
-        "Price":"100SAR per hour"
+        "Price":100
     },
     {
         "id":2,
@@ -24,7 +24,7 @@
         "instruments":"Paino, Getar",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga adipisicing elit. Tenetur quasi incidunt laboriosam ",
         "AvailableTime": "Thursday, Wednesday, Friday",
-        "Price":"100SAR per hour"
+        "Price":100
     },
     {
         "id":3,
@@ -33,6 +33,6 @@
         "instruments":"Paino, Getar",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
-        "Price":"100SAR per hour"
+        "Price":100
     }
 ]
