@@ -187,14 +187,14 @@ main {
   text-align: center;
   color: white;
 }
+.aboutSection i  {
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.7);
+}
 .aboutSection h2  {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 50px;
   font-weight:500;
-}
-.aboutSection i  {
-  font-size: 80px;
-  color: rgba(255, 255, 255, 0.7);
 }
 .aboutSection button {
   padding: 15px 25px;
@@ -213,7 +213,6 @@ main {
 /*----------service section----------*/
 .serviceSectionContainer {
   padding: 100px;
-  border-bottom: 5px solid white ;
 }
 .serviceSectionContainer h2 {
   text-align: center;
@@ -231,9 +230,15 @@ main {
 }
 .serviceSection .right {
   text-align: right;
-  padding-right: 110px;
+  padding-right: 25px;
 }
-.serviceSection button {
+.serviceSection img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  height: 380px;
+  width: 500px;
+  margin-left: 50px;
+}
+.serviceContent button {
   padding: 15px 25px;
   border: none;
   border-radius: 8px;
@@ -244,31 +249,24 @@ main {
   font-weight: 300;
   margin-top: 20px;
 }
-.serviceSection button:hover {
+.serviceContent button:hover {
   background-color: #221c16e2;
 }
-.serviceSection h4 {
+.serviceContent h4 {
   font-size: 35px;
+  margin: 20px 0px;
 }
-.serviceSection p {
+.serviceContent p {
   font-size: 18px;
-}
-.serviceSection img {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-  height: 380px;
-  width: 500px;
 }
 
 /*----------news letter section----------*/
 .newsLetterSectionContainer {
-  padding: 100px;
+  padding: 50px 0px 0px 0px;
 }
 .newsLetterSection {
-  background-color: #221c16;
-  margin: auto;
-  padding: 10px;
-  padding-bottom: 50px;
-  width: 100vh;
+  background-color: #47423b;
+  padding: 2px 0px 20px 0px;
   text-align: center;
   color: white;
 }
@@ -279,15 +277,16 @@ main {
 .newsLetterSection input {
   text-align: center;
   padding: 12px 100px;
+  margin: 10px;
   border: none;
   border-radius: 2px;
-  margin: 15px;
 }
 .newsLetterSection input:focus {
   outline: 1px dotted #221c16d2;
 }
 .newsLetterSection button {
   padding: 12px 20px;
+  margin: 10px;
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -351,11 +350,387 @@ main {
   background-color: #221c16e2;
 }
 
-/*-------------------------------Responsive-------------------------------*/
-@media only screen and (max-width: 700px) {
+/*---------------------------------------------------------------------------------*/
+/*-----------------------------------RESPONSIVE------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+
+  /*-------------------------------HOME-------------------------------1024*/
+  /*----------header----------*/
+  .headerContent div  {
+    font-size: 110px;
+  }
+  .headerContent button {
+    padding: 17px 38px;
+    font-size: 15px;
+  }
+
+  /*----------about section----------*/
+  .aboutSection {
+    padding: 40px 150px;
+  }
+  .aboutSection i  {
+    font-size: 70px;
+  }
+  .aboutSection h2  {
+    font-size: 40px;
+  }
+
+  /*----------service section----------*/
+  .serviceSectionContainer {
+    padding: 80px;
+  }
+  .serviceSectionContainer h2 {
+    font-size: 50px;
+  }
+  .serviceSection img {
+    height: 280px;
+    width: 400px;
+    margin-left: 0px;
+  }
+  .serviceSection .right {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .serviceContent button {
+    padding: 13px 22px;
+    font-size: 10px;
+    color: white;
+  }
+  .serviceContent h4 {
+    font-size: 30px;
+  }
+  .serviceContent p {
+    font-size: 15px;
+  }
+
+  /*----------news letter section----------*/
+  .newsLetterSection {
+    padding: 2px 0px 20px 0px;
+  }
+  .newsLetterSection h2 {
+    font-size: 30px;
+  }
+  .newsLetterSection input {
+    padding: 10px 80px;
+  }
+  .newsLetterSection button {
+    padding: 11px 18px;
+    font-size: 11px;
+  }
+  .newsLetterSection button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /*-------------------------------NAV-------------------------------768px*/
+  nav {
+    height:75px;
+  }
+  .mainNav {
+    padding:17px;
+  }
+  .navBar img {
+    width: 80px;
+    margin-left: 15px;
+  }
+  .navBar ul {
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  /*----------dropdown----------*/
+  .dropdownContent {
+    top:60px;
+    left: 200px;
+  }
+
+  /*----------login & singup btn & profile----------*/
+  .btnNav {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+  }
+  .btnNav button{
+    padding: 5px 15px;
+    font-size: 10px;
+  }
+  .btnNav p{
+    font-size: 14px;
+  }
+
+  /*-------------------------------HOME-------------------------------*/
+  /*----------header----------*/
+  .headerContent div  {
+    font-size: 80px;
+  }
+  .headerContent button {
+    padding: 13px 25px;
+    font-size: 12px;
+  }
+
+  /*----------about section----------*/
+  .aboutSection {
+    padding: 30px 100px;
+  }
+  .aboutSection i  {
+    font-size: 50px;
+  }
+  .aboutSection h2  {
+    font-size: 30px;
+  }
+  .aboutSection p  {
+    font-size: 15px;
+  }
+  .aboutSection button {
+    padding: 12px 20px;
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  /*----------service section----------*/
+  .serviceSectionContainer h2 {
+    font-size: 40px;
+  }
+  .serviceSection {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+  }
+  .serviceSection img {
+    height: 280px;
+    width: 400px;
+    margin:auto;
+  }
+  .serviceSection .right {
+    text-align: center;
+    padding-right: 0px;
+  }
+ .reverseServiceSection {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 80%;
+    margin:auto;
+  }
+  .reverseServiceSection img{
+    margin: 0%;
+  }
+  .serviceContent {
+    text-align: center;
+  }
+  .serviceContent button {
+    padding: 13px 22px;
+    font-size: 10px;
+    color: white;
+  }
+  .serviceContent h4 {
+    font-size: 30px;
+  }
+  .serviceContent p {
+    font-size: 15px;
+  }
+
+  /*----------news letter section----------*/
+  .newsLetterSectionContainer {
+    padding: 0px;
+  }
+  .newsLetterSection h2 {
+    font-size: 20px;
+    letter-spacing: 15px;
+  }
+  .newsLetterSection p {
+    font-size: 11px;
+  }
+  .newsLetterSection input {
+    padding: 8px 35px;
+    font-size: 11px;
+  }
+  .newsLetterSection button {
+    padding: 10px 12px;
+    font-size: 8px;
+  }
   footer {
     display: flex;
     flex-direction: column;
     font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  /*-------------------------------HOME-------------------------------425px*/
+  nav {
+    height:45px;
+  }
+  .mainNav {
+    padding:11px;
+  }
+  .navBar img {
+    width: 50px;
+    margin-left: 3px;
+  }
+  .navBar ul {
+    padding-left: 10px;
+    gap: 5px;
+    font-size: 6px;
+  }
+
+  /*
+  .navBar ul {
+    display: none;
+  }
+  */
+  /*----------dropdown----------*/
+  .dropdownContent {
+    min-width: 80px;
+    top:30px;
+    left: 100px;
+  }
+
+  /*----------login & singup btn & profile----------*/
+  .btnNav {
+    display: flex;
+    gap: 5px;
+    margin-right: 3px;
+  }
+  .btnNav button{
+    padding: 5px 10px;
+    font-size: 6px;
+  }
+  .btnNav p{
+    font-size: 8px;
+  }
+
+  /*-------------------------------HOME-------------------------------*/
+  /*----------header----------*/
+  .headerContent {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+  }
+  .headerContent div  {
+    font-size: 60px;
+    background-color: #221c165d;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .headerContent button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  /*----------about section----------*/
+  main {
+    padding-top: 50px;
+  }
+  .aboutSection {
+    height: 33vh;
+  }
+  .aboutSection {
+    padding: 30px 50px;
+  }
+  .aboutSection i  {
+    font-size: 30px;
+  }
+  .aboutSection h2  {
+    font-size: 15px;
+  }
+  .aboutSection p  {
+    font-size: 10px;
+  }
+  .aboutSection button {
+    padding: 6px 10px;
+    font-size: 8px;
+    margin-top: 15px;
+  }
+
+  /*----------service section----------*/
+  .serviceSectionContainer {
+    padding: 40px;
+  }
+  .serviceSectionContainer h2 {
+    font-size: 23px;
+  }
+  .serviceSection {
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    align-content: center;
+    height: 70vh;
+  }
+  .serviceSection img {
+    height: 160px;
+    width: 250px;
+  }
+  .serviceSection .right {
+    text-align: center;
+    padding-right: 0px;
+  }
+ .reverseServiceSection {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    margin:auto;
+  }
+  .reverseServiceSection img{
+    margin: 0%;
+  }
+  .serviceContent {
+    text-align: center;
+  }
+  .serviceContent button {
+    padding: 8px 13px;
+    font-size: 7px;
+  }
+  .serviceContent h4 {
+    font-size: 20px;
+  }
+  .serviceContent p {
+    font-size: 10px;
+  }
+
+  /*----------news letter section----------*/
+  .newsLetterSectionContainer {
+    padding: 0px;
+  }
+  .newsLetterSection h2 {
+    font-size: 13px;
+    letter-spacing: 8px;
+  }
+  .newsLetterSection p {
+    font-size: 8px;
+  }
+  .newsLetterSection input {
+    padding: 5px 13px;
+    font-size: 8px;
+  }
+  .newsLetterSection button {
+    padding: 6px 10px;
+    font-size: 6px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+
+  /*-------------------------------SING UP & LOG IN-------------------------------*/
+  .logIn-fieldset{
+    gap: 15px;
+    padding: 50px 50px;
+    font-size: 20px;
+  }
+  .logIn-fieldset input {
+    padding: 10px 18px;
+    border: none;
+  }
+  .logIn-fieldset a {
+    font-size: 12px;
+  }
+  .logIn-fieldset button {
+    padding: 10px 16px;
+    font-size: 10px;
   }
 }
