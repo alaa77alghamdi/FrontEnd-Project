@@ -21,10 +21,9 @@ export default function SocialProfileWithImage() {
   const note = localStorage.getItem("note");
   const nameInstrumemt = localStorage.getItem("nameInstrumemt");
   const price = localStorage.getItem("instructorPrice");
-const musicianPrice=localStorage.getItem("musicianPrice")
+  const musicianPrice = localStorage.getItem("musicianPrice");
   const musicianName = localStorage.getItem("musicianName");
-  const price = localStorage.getItem("instructorPrice");
-
+  const instructorName = localStorage.getItem("instructorName");
 
   const navigate = useNavigate();
 
@@ -32,6 +31,8 @@ const musicianPrice=localStorage.getItem("musicianPrice")
     if (confirm("Are you sure to cancel")) {
       localStorage.removeItem("musicianName");
       localStorage.removeItem("nameInstrumemt");
+      localStorage.removeItem("instructorName");
+
       navigate("/profile");
     }
   };
@@ -90,24 +91,28 @@ const musicianPrice=localStorage.getItem("musicianPrice")
 
             <Stack direction={"row"} justifyContent={"center"}>
               <Stack>
-                {localStorage.getItem("location") != null ? (
+                {localStorage.getItem("instructorName") != null ? (
                   <Text fontSize={"20"} color={"gray.500"}>
-                    Tikct: <br></br>
+                    Booking: <br></br>
+                    instructor Name:{"   "} {"  "} {instructorName}
+                    <br></br>
                     location: {"   "}
                     {"  "}
                     {location}
                     <br></br>
-                    event:{event}
+                    event: {"   "} {"  "} {event}
                     <br></br>
-                    time:{time}
+                    time: {"   "} {"  "}
+                    {time}
                     <br></br>
-                    note:{note}
+                    note:{"   "} {"  "}
+                    {note}
                   </Text>
                 ) : null}
                 <br></br>
                 {localStorage.getItem("nameInstrumemt") != null ? (
                   <Text fontSize={"20"} color={"gray.500"}>
-                    Tikct:
+                    Store:
                     <br></br>
                     name:{nameInstrumemt}
                     <br></br>
@@ -117,7 +122,11 @@ const musicianPrice=localStorage.getItem("musicianPrice")
 
                 {localStorage.getItem("") != null ? (
                   <Text fontSize={"20"} color={"gray.500"}>
-                    Tikct:
+                    Learing:
+                    <br></br>
+                    name:{musicianPrice}
+                    <br></br>
+                    price:{musicianPrice}
                   </Text>
                 ) : null}
 
