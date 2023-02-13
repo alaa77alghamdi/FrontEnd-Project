@@ -46,7 +46,7 @@ function LearningCard() {
                             />
 
                     <Stack align='center'>
-                        <CardBody align='center' width='500px'>
+                        <CardBody align='center'>
                         <Heading size='md'>{instructor.name}</Heading>
 
                         <Text py='2'>
