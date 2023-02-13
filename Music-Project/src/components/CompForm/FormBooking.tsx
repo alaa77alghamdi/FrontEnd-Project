@@ -1,5 +1,5 @@
 import React from 'react'
-import  './Confierm.css'
+// import  './Confierm.css'
 import  './forms.css'
 import { useNavigate } from 'react-router-dom'
 function FormBooking() {
@@ -26,8 +26,8 @@ function FormBooking() {
 					<div className="booking-form">
 						<div className="booking-bg">
 							<div className="form-header">
-								<h2>BOOKING a MUSIC</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+								<h2>BOOK.. MUSICIAN</h2>
+								<p>Music gives a soul to the universe, wings to the mind, flight to the imagination.</p>
 							</div>
 						</div>
 						<form>
@@ -35,8 +35,8 @@ function FormBooking() {
 							<div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label"> Location</span>
-										<input className="form-control" required  onChange={e=> setLocation(e.target.value)}/>
+										<span className="form-label" > Location</span>
+										<input className="form-control"   onChange={e=> setLocation(e.target.value)}required/>
 									</div>
 								</div>
 							</div>
@@ -47,7 +47,7 @@ function FormBooking() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Event </span>
-										<input className="form-control"  required onChange={e=> setEvent(e.target.value)}/>
+										<input className="form-control" onChange={e=> setEvent(e.target.value)} required/>
 									</div>
 								</div>
 							</div>
@@ -60,7 +60,7 @@ function FormBooking() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Time</span>
-										<input className="form-control" type="date" required  onChange={e=> setTime(e.target.value)}/>
+										<input className="form-control" type="date"onChange={e=> setTime(e.target.value)} required />
 									</div>
 								</div>
 							</div>

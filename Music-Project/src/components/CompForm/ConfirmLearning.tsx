@@ -20,7 +20,7 @@ function ConfirmLearning() {
 						<div className="booking-bg">
 							<div className="form-header">
 								<h2>EDUCATION A MUSIC</h2>
-								<p>- Your reservation has been confirmed successfully </p>
+								{/* <p>- Your reservation has been confirmed successfully </p> */}
 							</div>
 						</div>
 						<form>
@@ -30,7 +30,7 @@ function ConfirmLearning() {
 									<div className="form-group">
 									<br></br> 
 									<br></br>
-								Dear customer <span  style={{fontSize:'50px'}}>{name}</span>, <br></br>your reservation for a music booking service has been confirmed.<br></br>
+									Dear customer <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your reservation for EDUCATION A MUSIC service has been confirmed.<br></br>
                                     
 									</div>
 								</div>

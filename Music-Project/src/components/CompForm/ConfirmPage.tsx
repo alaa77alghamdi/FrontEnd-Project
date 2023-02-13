@@ -19,8 +19,8 @@ export default function ConfirmPage() {
 					<div className="booking-form">
 						<div className="booking-bg">
 							<div className="form-header">
-								<h2>BOOKING A MUSIC</h2>
-								<p>- Your reservation has been confirmed successfully </p>
+								<h2>BOOK A MUSICIAN</h2>
+								{/* <p>- Your reservation has been confirmed successfully </p> */}
 							</div>
 						</div>
 						<form>
@@ -30,7 +30,7 @@ export default function ConfirmPage() {
 									<div className="form-group">
 									<br></br> 
 									<br></br>
-								Dear customer <span  style={{fontSize:'50px'}}>{name}</span>, <br></br>your reservation for a music booking service has been confirmed.<br></br>
+								Dear customer <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your reservation for a music booking service has been confirmed.<br></br>
                                     
 									</div>
 								</div>
