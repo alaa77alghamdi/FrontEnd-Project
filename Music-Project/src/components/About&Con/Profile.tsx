@@ -8,8 +8,8 @@ export default function Profile() {
       <div className="column1">
         <div className="Card1">
         <h3>User Info</h3>
-          <p>Name: alaa abdu</p>
-          <p>Email: lolo@gmail.com</p>
+          <p>Name: {localStorage.getItem('name')}</p>
+          <p>Email: {localStorage.getItem('email')}</p>
         </div>
       </div>
 
