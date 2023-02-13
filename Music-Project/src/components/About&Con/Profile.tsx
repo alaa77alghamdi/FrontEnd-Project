@@ -12,10 +12,22 @@ import {
 } from "@chakra-ui/react";
 
 export default function SocialProfileWithImage() {
+  
+	const location =localStorage.getItem('location')
+	const event =localStorage.getItem('event')
+	const time =localStorage.getItem('time')	
+	const note =localStorage.getItem('note')
+
+
+
   return (
-    <>
-    <Center py={123} bg={"#f3f1e8"}>
-      
+    <Box  
+    bg={"#f3f1e8"}>
+    <Heading fontSize={"20"} color={"gray.500"} textAlign={"center"} paddingTop={15}>
+                Tikct
+              </Heading>
+    <Center py={123}>
+    
       <Box
         maxW={"766px"}
         padding={40}
@@ -31,7 +43,7 @@ export default function SocialProfileWithImage() {
 
       >
         
-     
+       
         <Flex mt={-12} >
           <Avatar
           
@@ -57,13 +69,29 @@ export default function SocialProfileWithImage() {
             <Stack spacing={0} align={"center"} paddingTop={3}>
            
               <Text fontSize={"20"} color={"gray.500"}>
-                Tikct
+                Tikct:
+                location:{location}
+                event:{event}
+                time:{time}
+                note:{note}
+              </Text>
+
+
+              <Text fontSize={"20"} color={"gray.500"}>
+                Tikct:
+              
+              </Text>
+
+
+              <Text fontSize={"20"} color={"gray.500"}>
+                Tikct:
+              
               </Text>
             </Stack>
           </Stack>
         </Box>
       </Box>
     </Center>
-    </>
+    </Box>
   );
 }
