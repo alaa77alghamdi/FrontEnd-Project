@@ -9,7 +9,8 @@ import {
     Button,
     CardFooter,
   } from '@chakra-ui/react';
-  
+  import { useNavigate } from 'react-router-dom';
+
   interface CardProp {
     img:string;
     name:string;
@@ -19,6 +20,22 @@ import {
  }
   
   export default function ProductSimple({img, name, desc, price}:CardProp ) {
+    const navigate = useNavigate()
+
+    const checkLogIn =()=>{
+      if (localStorage.getItem("name") != null){
+          //redirect to profile
+          navigate('/profile')
+          localStorage.setItem("name", name)
+          localStorage.setItem("img", img)
+          localStorage.setItem("desc", desc)
+          localStorage.setItem("price", price)
+          
+      }else{
+          //redirect to logIn
+          navigate('/logIn')
+      }
+  }
     return (
       <Center py={12}>
         <Box
@@ -75,13 +92,17 @@ import {
             <Text fontWeight={400} fontSize={'xl'}>
                 Price: <i>{price}</i>
               </Text>
-              <Button variant='solid' bg='#221409'
-                                color='white'
-                                py='6'
-                                px='8'
-                                _hover={{ bg: '#221409' }}>
-                                    Buy
-                                </Button>
+              <Button 
+              onClick={checkLogIn}
+              variant='solid' 
+              bg='#221409'
+              color='white'
+              py='6'
+              px='8'
+              _hover={{ bg: '#221409' }}>
+                  Buy
+              </Button>
+
           </Stack>
           
         </Box>
