@@ -10,12 +10,15 @@ export default function Home() {
     navigate("/signUp")    
   }
   const MusicEducation =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/musicEducation")    
   }
   const BookMusician =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/bookMusician")    
   }
   const MusicalInstruments =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/musicalInstruments")    
   }
   return (
