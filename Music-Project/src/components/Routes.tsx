@@ -10,6 +10,9 @@ import SignUp from './SignUp'
 import Profile from './About&Con/Profile'
 
 import Home from './Home'
+import FormBooking from './CompForm/FormBooking'
+import ConfirmPage from './CompForm/ConfirmPage'
+import FormLearing from './CompForm/FormLearing'
 
 export default function Routes() {
   return (
@@ -24,6 +27,9 @@ export default function Routes() {
             <Route path='/profile' element={<Profile />} />
             <Route path='logIn' element={<LogIn />}></Route>
             <Route path='signUp' element={<SignUp />}></Route>
+            <Route path='bookingFom' element={<FormBooking/>}></Route>
+            <Route path='learningFom' element={<FormLearing/>}></Route>
+            <Route path='confirm' element={<ConfirmPage/>}></Route>
         </Routes_>
     </div>
   )
