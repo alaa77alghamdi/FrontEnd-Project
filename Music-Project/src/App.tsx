@@ -12,14 +12,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* <FormBooking/>
-      <FormLearing/>
-      <ConfirmPage/> */}
-      <Nav />
-      <Routes />
-      <Footer />
-    </div>
-  )
+    <Nav />
+    <Routes />
+    <Footer />
+  </div>
+)
+  
 }
 
 export default App
