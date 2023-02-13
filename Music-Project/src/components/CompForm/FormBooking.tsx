@@ -13,7 +13,7 @@ function FormBooking() {
 		localStorage.setItem('event',event)
 		localStorage.setItem('time',time)
 		localStorage.setItem('note',note)
-		 navigate('/confirm')
+		 navigate('/confirmBooking')
 	}
   return (
     <div>

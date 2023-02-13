@@ -1,7 +1,23 @@
 import React from 'react';
 import  './Confierm.css'
 import  './forms.css'
+import { useNavigate } from 'react-router-dom'
 export default function FormLearing() {
+
+	const[location,setLocation]=React. useState('')
+	const[event,setEvent]=React. useState('')
+	const[time,setTime]=React. useState('')
+	const[note,setnote]=React. useState('')
+	const navigate = useNavigate()
+	const confirmLearning=()=>{
+		localStorage.setItem('location',location)
+		localStorage.setItem('event',event)
+		localStorage.setItem('time',time)
+		localStorage.setItem('note',note)
+		 navigate('/confirmEducation')
+	}
+
+
   return (
     <div>
             
@@ -22,7 +38,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Location</span>
-										<input className="form-control" required />
+										<input className="form-control" required onChange={e=> setLocation(e.target.value)} />
 									</div>
 								</div>
 							</div>
@@ -33,7 +49,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Event </span>
-										<input className="form-control"  required />
+										<input className="form-control"  required onChange={e=> setEvent(e.target.value)} />
 									</div>
 								</div>
 							</div>
@@ -46,7 +62,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Time</span>
-										<input className="form-control" type="date" required />
+										<input className="form-control" type="date" required  onChange={e=> setTime(e.target.value)}/>
 									</div>
 								</div>
 							</div>
@@ -59,7 +75,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Note</span>
-										<input className="form-control"  />
+										<input className="form-control"  onChange={e=> setnote(e.target.value)} />
 									</div>
 								</div>
 							</div>
@@ -74,7 +90,8 @@ export default function FormLearing() {
 			  <button type='submit'>Log In</button>
 				</div> */}
 							<div className="form-btn">
-								<button className="submit-btn">SEND</button>
+								<button className="submit-btn" 
+								onClick={confirmLearning}>SEND</button>
 							</div>
 						</form>
 					</div>
