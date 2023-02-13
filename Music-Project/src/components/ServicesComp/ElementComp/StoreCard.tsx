@@ -26,7 +26,7 @@ import {
       if (localStorage.getItem("name") != null){
           //redirect to profile
           navigate('/profile')
-          localStorage.setItem("nameInstrumemt", name)
+          localStorage.setItem("nameInstrument", name)
           localStorage.setItem("img", img)
           localStorage.setItem("desc", desc)
           localStorage.setItem("price", price)

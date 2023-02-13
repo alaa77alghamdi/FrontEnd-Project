@@ -15,9 +15,9 @@ export default function Learning() {
       </div>
     <Container 
     maxW={{md:'container.md', lg:'container.lg'}}
-    my='10'
+    mt='20'
     >
-        <SimpleGrid spacing={10} >
+        <SimpleGrid >
                 <LearningCard />
         </SimpleGrid>
     </Container>
