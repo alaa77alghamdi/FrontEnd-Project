@@ -14,6 +14,9 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate, Link } from "react-router-dom";
 
+
+import "./Al.css";
+
 export default function SocialProfileWithImage() {
   const location = localStorage.getItem("location");
   const event = localStorage.getItem("event");
@@ -43,6 +46,7 @@ export default function SocialProfileWithImage() {
         color={"gray.500"}
         textAlign={"center"}
         paddingTop={15}
+        fontFamily= 'Quicksand, sans-serif;'
       >
         Tikct
       </Heading>
@@ -64,7 +68,7 @@ export default function SocialProfileWithImage() {
             <Avatar
               size={"x2"}
               src={
-                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+                "https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
               }
               css={{
                 border: "2px solid white",
@@ -75,14 +79,16 @@ export default function SocialProfileWithImage() {
           <Box p={6}>
             <Stack spacing={0} mb={5} align={"center"}>
               <Heading
-                fontSize={"2xl"}
-                fontWeight={500}
+                fontSize={"28"}
+                fontWeight={1100}
                 fontFamily={"body"}
                 paddingTop={4}
+                fontFamily= 'Quicksand, sans-serif;'
+
               >
                 {localStorage.getItem("name")}{" "}
               </Heading>
-              <Text color={"gray.500"} paddingTop={4}>
+              <Text color={"gray.500"} paddingTop={4}  fontFamily= 'Quicksand, sans-serif;'>
                 alaa@hotmail.com""fake"
               </Text>
             </Stack>
@@ -90,9 +96,9 @@ export default function SocialProfileWithImage() {
             <br></br>
 
             <Stack direction={"row"} justifyContent={"center"}>
-              <Stack>
+              <Stack  fontFamily= 'Quicksand, sans-serif;'>
                 {localStorage.getItem("instructorName") != null ? (
-                  <Text fontSize={"20"} color={"gray.500"}>
+                  <Text fontSize={"20"} >
                     Booking: <br></br>
                     instructor Name:{"   "} {"  "} {instructorName}
                     <br></br>
@@ -111,7 +117,7 @@ export default function SocialProfileWithImage() {
                 ) : null}
                 <br></br>
                 {localStorage.getItem("nameInstrumemt") != null ? (
-                  <Text fontSize={"20"} color={"gray.500"}>
+                  <Text fontSize={"22"} color={"black.100"}>
                     Store:
                     <br></br>
                     name:{nameInstrumemt}
