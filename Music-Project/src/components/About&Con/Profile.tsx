@@ -51,23 +51,29 @@ export default function SocialProfileWithImage() {
       >
         Tikct
       </Heading>
-      <Center py={90}>
+      <Center py={100}>
         <Box
-          maxW={"766px"}
-          paddingTop="40"
+
+          w={{ base: "150", md: "500", lg: "666px" }}
+        
+          paddingTop="20"
           paddingBottom={10}
-          w={"full"}
+         
           bg={useColorModeValue("#FFFAF0", "gray.800")}
           boxShadow={"2xl"}
           rounded={"md"}
           overflow={"hidden"}
           css={{
-            border: "2px solid wihte",
+            border: "1px solid wihte",
           }}
         >
-          <Flex mt={-12} justify={"center"}>
+          <Flex mt={{ base: -10,md:-29,lg:-13}} justify={"center"}>
+          
             <Avatar
-              size={"x2"}
+              w={{ base: "40%", md: "50%", lg: "25%" }}
+              h={"25%"}
+
+              
               src={
                 "https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
               }
@@ -82,7 +88,6 @@ export default function SocialProfileWithImage() {
               <Heading
                 fontSize={"28"}
                 fontWeight={1100}
-                fontFamily={"body"}
                 paddingTop={4}
                 fontFamily= 'Quicksand, sans-serif;'
 
@@ -140,7 +145,13 @@ export default function SocialProfileWithImage() {
                 ) : null}
 
                 <Stack justify={"space-between"}>
-                  <Button onClick={cancel} bg={"#C05621"}>Cancel</Button>{" "}
+                 
+
+                {localStorage.getItem("instructorName") != null ? (
+                 
+                 <Button onClick={cancel} bg={"#C05621"}>Cancel</Button>
+                ) : null}
+                 
                 </Stack>
               </Stack>
             </Stack>

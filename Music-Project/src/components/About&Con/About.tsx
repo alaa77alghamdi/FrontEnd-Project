@@ -17,8 +17,10 @@ function About() {
   return (
     <>
     <Flex
-width={"100vw"} height={"83.20vh"} alignContent={"center"} 
-    >
+width={["100vw,50vw"]}  alignContent={"center"} 
+height={{ base: "3xl", md: "4xl", lg: "83vh" }}
+  
+  >
        <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={0}
@@ -46,7 +48,7 @@ width={"100vw"} height={"83.20vh"} alignContent={"center"}
        
         <chakra.h1
           mb={6}
-          fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}
+          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
           color="brand.600"
           _dark={{ color: "gray.300" }}
@@ -60,7 +62,7 @@ width={"100vw"} height={"83.20vh"} alignContent={"center"}
         <chakra.p
           pr={{ base: 0, lg: 16 }}
           mb={4}
-          fontSize="20"
+          fontSize={{ base: "1xl", md: "2xl", lg: "2xl" }}
           color="brand.600"
           _dark={{ color: "gray.400" }}
           letterSpacing="wider"
