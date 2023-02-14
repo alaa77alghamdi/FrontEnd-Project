@@ -17,7 +17,7 @@ function About() {
   return (
     <>
     <Flex
-width={"99.91vw"} height={"86.75vh"} alignContent={"center"} 
+width={"100vw"} height={"83.20vh"} alignContent={"center"} 
     >
        <SimpleGrid
       columns={{ base: 1, md: 2 }}

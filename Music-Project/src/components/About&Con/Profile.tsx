@@ -22,7 +22,7 @@ export default function SocialProfileWithImage() {
   const event = localStorage.getItem("event");
   const time = localStorage.getItem("time");
   const note = localStorage.getItem("note");
-  const nameInstrumemt = localStorage.getItem("nameInstrumemt");
+  const nameInstrumemt = localStorage.getItem("nameInstrument");
   const instructorPrice = localStorage.getItem("instructorPrice");
   const musicianPrice = localStorage.getItem("musicianPrice");
   const musicianName = localStorage.getItem("musicianName");
@@ -34,7 +34,7 @@ export default function SocialProfileWithImage() {
   const cancel = () => {
     if (confirm("Are you sure to cancel")) {
       localStorage.removeItem("musicianName");
-      localStorage.removeItem("nameInstrumemt");
+      localStorage.removeItem("nameInstrument");
       localStorage.removeItem("instructorName");
 
       navigate("/profile");
@@ -57,7 +57,7 @@ export default function SocialProfileWithImage() {
           paddingTop="40"
           paddingBottom={10}
           w={"full"}
-          bg={useColorModeValue("white", "gray.800")}
+          bg={useColorModeValue("#FFFAF0", "gray.800")}
           boxShadow={"2xl"}
           rounded={"md"}
           overflow={"hidden"}
@@ -90,7 +90,7 @@ export default function SocialProfileWithImage() {
                 {localStorage.getItem("name")}{" "}
               </Heading>
               <Text color={"gray.500"} paddingTop={4}  fontFamily= 'Quicksand, sans-serif;'>
-                alaa@hotmail.com""fake"
+              {localStorage.getItem("email")}{" "}
               </Text>
             </Stack>
             <Divider orientation="horizontal" />
@@ -127,6 +127,7 @@ export default function SocialProfileWithImage() {
                     price: {"   "} {"  "}{price}
                   </Text>
                 ) : null}
+                <br></br>
 
                 {localStorage.getItem("instructorName") != null ? (
                   <Text fontSize={"20"} color={"black.100"}>
@@ -139,7 +140,7 @@ export default function SocialProfileWithImage() {
                 ) : null}
 
                 <Stack justify={"space-between"}>
-                  <Button onClick={cancel}>Cancel</Button>{" "}
+                  <Button onClick={cancel} bg={"#C05621"}>Cancel</Button>{" "}
                 </Stack>
               </Stack>
             </Stack>
