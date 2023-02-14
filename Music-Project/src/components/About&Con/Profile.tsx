@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate, Link } from "react-router-dom";
 
-
 import "./Al.css";
 
 export default function SocialProfileWithImage() {
@@ -43,22 +42,19 @@ export default function SocialProfileWithImage() {
   return (
     <Box bg={"#f3f1e8"}>
       <Heading
-        fontSize={"20"}
+        fontSize={"50"}
         color={"gray.500"}
         textAlign={"center"}
-        paddingTop={15}
-        fontFamily= 'Quicksand, sans-serif;'
+        paddingTop={30}
+        fontFamily="Quicksand, sans-serif;"
       >
-        Tikct
+        Profile
       </Heading>
-      <Center py={100}>
+      <Center py={150}>
         <Box
-
-          w={{ base: "150", md: "500", lg: "666px" }}
-        
+          w={{ base: "150", md: "500", lg: "866px" }}
           paddingTop="20"
           paddingBottom={10}
-         
           bg={useColorModeValue("#FFFAF0", "gray.800")}
           boxShadow={"2xl"}
           rounded={"md"}
@@ -67,13 +63,10 @@ export default function SocialProfileWithImage() {
             border: "1px solid wihte",
           }}
         >
-          <Flex mt={{ base: -10,md:-29,lg:-13}} justify={"center"}>
-          
+          <Flex mt={{ base: -10, md: -29, lg: -13 }} justify={"center"}>
             <Avatar
-              w={{ base: "40%", md: "50%", lg: "25%" }}
+              w={{ base: "40%", md: "50%", lg: "23%" }}
               h={"25%"}
-
-              
               src={
                 "https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
               }
@@ -86,25 +79,31 @@ export default function SocialProfileWithImage() {
           <Box p={6}>
             <Stack spacing={0} mb={5} align={"center"}>
               <Heading
-                fontSize={"28"}
+                fontSize={{ base: "20", md: "20", lg: "40" }}
                 fontWeight={1100}
                 paddingTop={4}
-                fontFamily= 'Quicksand, sans-serif;'
-
+                fontFamily="Quicksand, sans-serif;"
               >
                 {localStorage.getItem("name")}{" "}
               </Heading>
-              <Text color={"gray.500"} paddingTop={4}  fontFamily= 'Quicksand, sans-serif;'>
-              {localStorage.getItem("email")}{" "}
+              <Text
+                color={"gray.500"}
+                paddingTop={4}
+                fontFamily="Quicksand, sans-serif;"
+              >
+                {localStorage.getItem("email")}{" "}
               </Text>
             </Stack>
             <Divider orientation="horizontal" />
             <br></br>
 
             <Stack direction={"row"} justifyContent={"center"}>
-              <Stack  fontFamily= 'Quicksand, sans-serif;'>
+              <Stack fontFamily="Quicksand, sans-serif;">
                 {localStorage.getItem("musicianName") != null ? (
-                  <Text fontSize={"20"} >
+                  <Text
+                    color={"black.100"}
+                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                  >
                     Booking: <br></br>
                     instructor Name:{"   "} {"  "} {musicianName}
                     <br></br>
@@ -124,34 +123,42 @@ export default function SocialProfileWithImage() {
                 ) : null}
                 <br></br>
                 {localStorage.getItem("nameInstrument") != null ? (
-                  <Text fontSize={"22"} color={"black.100"}>
+                  <Text
+                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                    color={"black.100"}
+                  >
                     Store:
                     <br></br>
-                    name: {"   "} {"  "}{nameInstrumemt}
+                    name: {"   "} {"  "}
+                    {nameInstrumemt}
                     <br></br>
-                    price: {"   "} {"  "}{price}
+                    price: {"   "} {"  "}
+                    {price}
                   </Text>
                 ) : null}
                 <br></br>
 
                 {localStorage.getItem("instructorName") != null ? (
-                  <Text fontSize={"20"} color={"black.100"}>
+                  <Text
+                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                    color={"black.100"}
+                  >
                     Learing:
                     <br></br>
-                    name: {"   "} {"  "}{instructorName}
+                    name: {"   "} {"  "}
+                    {instructorName}
                     <br></br>
-                    price: {"   "} {"  "}{price}
+                    price: {"   "} {"  "}
+                    {price}
                   </Text>
                 ) : null}
 
                 <Stack justify={"space-between"}>
-                 
-
-                {localStorage.getItem("instructorName") != null ? (
-                 
-                 <Button onClick={cancel} bg={"#C05621"}>Cancel</Button>
-                ) : null}
-                 
+                  {localStorage.getItem("instructorName") != null ? (
+                    <Button onClick={cancel} bg={"#221409"} color={"white"}>
+                      Cancel
+                    </Button>
+                  ) : null}
                 </Stack>
               </Stack>
             </Stack>
