@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { ChakraProvider, Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import StoreCard from './ElementComp/StoreCard';
 import instrumentList from './Instruments.json' 
 
@@ -7,6 +7,7 @@ export default function Store() {
   const [instruments, setInstrument]= React.useState(instrumentList)
 
   return (
+    <ChakraProvider>
     <Box className='services'>
      <div className="header3" >
       <div className="headerContent1">
@@ -28,6 +29,6 @@ export default function Store() {
             </SimpleGrid>
       </Container>
       </Box>
-
+    </ChakraProvider>
   )
 }

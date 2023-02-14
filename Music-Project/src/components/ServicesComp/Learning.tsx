@@ -1,10 +1,11 @@
 import React from 'react'
-import { SimpleGrid, Box, Container,  Card, CardHeader, CardBody, CardFooter, Stack, Image, Heading, Text,Button  } from '@chakra-ui/react'
+import { ChakraProvider,SimpleGrid, Box, Container,  Card, CardHeader, CardBody, CardFooter, Stack, Image, Heading, Text,Button  } from '@chakra-ui/react'
 import LearningCard from './ElementComp/LearningCard'
 import './Services.css'
 
 export default function Learning() {
   return (
+    <ChakraProvider>
     <Box className='services'>
      <div className="header2" >
       <div className="headerContent1">
@@ -22,5 +23,6 @@ export default function Learning() {
         </SimpleGrid>
     </Container>
     </Box>
+    </ChakraProvider>
   )
 }

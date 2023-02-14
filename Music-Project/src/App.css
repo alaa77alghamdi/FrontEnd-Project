@@ -114,7 +114,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   background-color: #221c16;
-  padding: 20px;
+  height: 70px;
   font-size: 16px;
   color: white;
 }
@@ -128,7 +128,7 @@ footer ul {
   gap: 20px;
 }
 footer li {  
-  padding: 9px 9px 6px 9px;
+  padding:9px 8px 6px 8px;
   background-color: rgba(255, 255, 255, 0.554);
   border-radius: 50%;
 }
@@ -152,8 +152,7 @@ footer li {
   font-size: 150px;
   color: white;
   font-weight:900;
-  margin: 0;
-  padding: 0;
+
 }
 .headerContent i  {
   font-weight:500;
@@ -184,7 +183,7 @@ main {
   background-repeat: no-repeat;
 }
 .aboutSection {
-  height: 50vh;
+  height: 40vh;
   background-color: #221c16ae;
   padding: 40px 200px;
   text-align: center;
@@ -475,6 +474,7 @@ main {
 
   /*----------about section----------*/
   .aboutSection {
+    height: 45vh;
     padding: 30px 100px;
   }
   .aboutSection i  {
@@ -558,7 +558,15 @@ main {
   footer {
     display: flex;
     flex-direction: column;
-    font-size: 13px;
+    font-size: 10px;
+    height: 60px;
+    padding: 5px;
+  }
+  footer ul{
+    padding: 0px;
+  }
+  footer li {  
+    padding: 6px 6px 5px 6px;
   }
 }
 
@@ -629,7 +637,7 @@ main {
     padding-top: 50px;
   }
   .aboutSection {
-    height: 33vh;
+    height: 30vh;
   }
   .aboutSection {
     padding: 30px 50px;
@@ -717,6 +725,10 @@ main {
     display: flex;
     flex-direction: column;
     font-size: 10px;
+    height: 60px;
+  }
+  footer li {  
+    padding: 6px 6px 5px 6px;
   }
 
   /*-------------------------------SING UP & LOG IN-------------------------------*/

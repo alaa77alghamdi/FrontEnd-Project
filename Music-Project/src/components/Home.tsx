@@ -117,7 +117,7 @@ export default function Home() {
           <div className='newsLetterSection'>
             <h2>NEWS LETTER</h2>
             <p>Keep up our latest news. Subscribe our news letter </p>
-            <input type='email' placeholder='Enter Your Email..' onChange={e =>{setEmail(e.target.value)}}></input>
+            <input type='email' placeholder='Enter Your Email..' onChange={e =>{setEmail(e.target.value)}} required></input>
             <button onClick={HomePage}>SUBSCRIBE</button>
           </div> 
         </section>

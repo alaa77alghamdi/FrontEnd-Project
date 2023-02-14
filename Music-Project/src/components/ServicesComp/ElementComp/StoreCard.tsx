@@ -1,4 +1,5 @@
 import {
+    ChakraProvider,
     Box,
     Center,
     useColorModeValue,
@@ -37,6 +38,7 @@ import {
       }
   }
     return (
+      <ChakraProvider>
       <Center py={12}>
         <Box
           role={'group'}
@@ -107,5 +109,6 @@ import {
           
         </Box>
       </Center>
+      </ChakraProvider>
     );
   }
