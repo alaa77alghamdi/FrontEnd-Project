@@ -56,7 +56,7 @@ nav {
 .dropdownContent {
   display: none;
   position: absolute;
-  top:60px;
+  top:55px;
   left: 260px;
   cursor: pointer;
   background-color: #221c16d2;
@@ -135,12 +135,17 @@ footer li {
 
 /*-------------------------------HOME-------------------------------*/
 /*----------header----------*/
+/*
 .headerBg {
   height: 88vh;
   background-image: url('./assets/header.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+*/
+video {
+  width: 100%;
 }
 .headerContent {
   position: absolute;
@@ -149,7 +154,7 @@ footer li {
 }
 .headerContent div  {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 150px;
+  font-size: 130px;
   color: white;
   font-weight:900;
 
@@ -159,7 +164,7 @@ footer li {
   color: rgba(255, 255, 255, 0.7);
 }
 .headerContent button {
-  padding: 15px 40px;
+  padding: 18px 40px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -183,7 +188,6 @@ main {
   background-repeat: no-repeat;
 }
 .aboutSection {
-  height: 40vh;
   background-color: #221c16ae;
   padding: 40px 200px;
   text-align: center;
@@ -206,7 +210,7 @@ main {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
   font-weight: 600;
-  margin-top: 20px;
+  margin: 40px;
 }
 .aboutSection button:hover {
   background-color: rgba(255, 255, 255, 0.6);
@@ -341,7 +345,7 @@ main {
 .logIn-fieldset button {
   padding: 10px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 1px;
   cursor: pointer;
   background-color: #221c16;
   font-size: 13px;
@@ -359,12 +363,15 @@ main {
 
   /*-------------------------------HOME-------------------------------1024*/
   /*----------header----------*/
+  .headerContent {
+    top: 200px;
+  }
   .headerContent div  {
-    font-size: 110px;
+    font-size: 80px;
   }
   .headerContent button {
-    padding: 17px 38px;
-    font-size: 15px;
+    padding: 13px 20px;
+    font-size: 12px;
   }
 
   /*----------about section----------*/
@@ -464,17 +471,20 @@ main {
 
   /*-------------------------------HOME-------------------------------*/
   /*----------header----------*/
+  .headerContent {
+    top: 160px;
+    left: 100px;
+  }
   .headerContent div  {
-    font-size: 80px;
+    font-size: 60px;
   }
   .headerContent button {
-    padding: 13px 25px;
-    font-size: 12px;
+    padding: 10px 18px;
+    font-size: 8px;
   }
 
   /*----------about section----------*/
   .aboutSection {
-    height: 45vh;
     padding: 30px 100px;
   }
   .aboutSection i  {
@@ -617,27 +627,21 @@ main {
   /*-------------------------------HOME-------------------------------*/
   /*----------header----------*/
   .headerContent {
-    position: absolute;
-    top: 200px;
-    left: 60px;
+    top: 90px;
+    left: 40px;
   }
   .headerContent div  {
-    font-size: 60px;
-    background-color: #221c165d;
-    padding: 10px;
+    font-size: 30px;
     border-radius: 10px;
   }
   .headerContent button {
-    padding: 10px 20px;
-    font-size: 12px;
+    padding: 6px 10px;
+    font-size: 5px;
   }
 
   /*----------about section----------*/
   main {
     padding-top: 50px;
-  }
-  .aboutSection {
-    height: 30vh;
   }
   .aboutSection {
     padding: 30px 50px;
@@ -654,7 +658,6 @@ main {
   .aboutSection button {
     padding: 6px 10px;
     font-size: 8px;
-    margin-top: 15px;
   }
 
   /*----------service section----------*/

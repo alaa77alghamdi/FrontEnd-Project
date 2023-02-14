@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import bookMusician from '../assets/bookMusician.jpeg'
 import musicalInstruments from '../assets/musicalInstruments.jpeg'
 import musicEducation from '../assets/musicEducation.jpeg'
-
+import cello from '../assets/cello.mp4';
 import About from './About&Con/About';
 
 export default function Home() {
@@ -41,6 +41,9 @@ export default function Home() {
     <div>
       {/*----------HEADER----------*/}
       <header className='headerBg'>
+        <video autoPlay loop muted>
+          <source src={cello} type='video/mp4'/>
+        </video>
         <div className='headerContent'>
           <div>Music <i>for</i> 
           <br/> Everyone</div> 
