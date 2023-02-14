@@ -19,6 +19,7 @@ export default function SignUp() {
             alert("Please, verify the password.")
         }else{
             localStorage.setItem("name" ,name)
+            localStorage.setItem("email" ,email)
             navigate("/")
         }
     }
