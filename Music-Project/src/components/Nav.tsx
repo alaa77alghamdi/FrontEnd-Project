@@ -35,9 +35,9 @@ export default function Nav() {
             <li className='dropdown'> 
               SERVICES ⌵
               <div className='dropdownContent'>
-                <Link to='/learningService'>Music Education</Link>
-                <Link to='/bookingService'>Book A Musician</Link>
-                <Link to='/storeService'>Musical Instruments</Link>
+                <Link to='/musicEducation'>Music Education</Link>
+                <Link to='/bookMusician'>Book A Musician</Link>
+                <Link to='/musicalInstruments'>Musical Instruments</Link>
               </div>
             </li>
             <li>|</li>

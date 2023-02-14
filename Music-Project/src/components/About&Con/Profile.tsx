@@ -1,4 +1,5 @@
 import {
+  ChakraProvider,
   Heading,
   Avatar,
   Box,
@@ -41,6 +42,7 @@ export default function SocialProfileWithImage() {
     }
   };
   return (
+    <ChakraProvider>
     <Box bg={"#f3f1e8"}>
       <Heading
         fontSize={"20"}
@@ -82,7 +84,6 @@ export default function SocialProfileWithImage() {
               <Heading
                 fontSize={"28"}
                 fontWeight={1100}
-                fontFamily={"body"}
                 paddingTop={4}
                 fontFamily= 'Quicksand, sans-serif;'
 
@@ -147,5 +148,6 @@ export default function SocialProfileWithImage() {
         </Box>
       </Center>
     </Box>
+    </ChakraProvider>
   );
 }

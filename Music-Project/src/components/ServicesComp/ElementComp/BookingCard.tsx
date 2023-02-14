@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card,
+import { ChakraProvider,
+        Card,
         CardHeader,
         CardBody, CardFooter, Stack, Image, Heading, Text,Button, ListItem, List,} from '@chakra-ui/react'
 import '../Services.css'
@@ -24,7 +25,7 @@ function BookingCard() {
         }
     }
   return (
-    <>
+    <ChakraProvider>
     {musicians.map((musician:any, index)=>{
         if (index%2 == 0){// use if to make row reverse 
                 return (
@@ -163,7 +164,7 @@ function BookingCard() {
         
     })}
     
-    </>
+    </ChakraProvider>
   )
 }
 

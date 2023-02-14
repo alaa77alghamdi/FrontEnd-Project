@@ -1,4 +1,5 @@
 import {
+  ChakraProvider,
   Box,
   Center,
   Container,
@@ -14,8 +15,9 @@ import React from "react";
 import "./Al.css";
 
 function About() {
+  
   return (
-    <>
+    <ChakraProvider>
     <Flex
 width={"99.91vw"} height={"86.75vh"} alignContent={"center"} 
     >
@@ -88,7 +90,7 @@ width={"99.91vw"} height={"86.75vh"} alignContent={"center"}
       
     </Flex>
      
-    </>
+    </ChakraProvider>
   );
 }
 

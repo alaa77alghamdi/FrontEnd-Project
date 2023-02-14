@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card,
+import { ChakraProvider, 
+        Card,
         CardHeader,
         CardBody, CardFooter, Stack, Image, Heading, Text,Button, ListItem, List,} from '@chakra-ui/react'
 import instructorList from './Instructors.json' 
@@ -23,7 +24,7 @@ function LearningCard() {
     }
     
   return (
-    <>
+    <ChakraProvider>
     {instructors.map((instructor, index)=>{
         return (
             <Card 
@@ -91,7 +92,7 @@ function LearningCard() {
         
     })}
     
-    </>
+    </ChakraProvider>
   )
 }
 
