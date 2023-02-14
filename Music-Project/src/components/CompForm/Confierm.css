@@ -1,0 +1,113 @@
+/* Conferime Style */
+
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	
+	font-size: 19px;
+	background: #f3f1e8;
+}
+
+.booking-form {
+	position: relative;
+	max-width: 912px;
+	width: 100%;
+	margin: auto;
+	background: #fff;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form .booking-bg {
+	position: absolute;
+	left: 25px;
+	top: -25px;
+	bottom: -25px;
+	width: 400px;
+	background-image: url('https://previews.123rf.com/images/natcha29/natcha292003/natcha29200300009/141764918-music-poster-design-template-background-decorative-with-guitar-vintage-retro-style-graphic-design-el.jpg');
+	background-size:90%;
+	background-position: center;
+	padding: 25px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.booking-form .booking-bg::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(123, 123, 123, 0.78);
+}
+
+.booking-form>form {
+	margin-left: 425px;
+	padding: 00px;
+}
+
+.booking-form .form-header {
+	margin-bottom: 30px;
+	margin-top: 60px;
+	position: relative;
+	z-index: 20;
+}
+
+.booking-form .form-header h2 {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 900;
+	color: #fff;
+	font-size: 35px;
+	padding: 7px;
+	text-transform: capitalize;
+}
+
+.booking-form .form-header p {
+	color: #d3cece;
+	font-size: 18px;
+	
+	
+	
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 30%;
+	width: 90%;
+	text-align: center;
+	padding-bottom: 100px;
+	
+}
+
+@media only screen and (max-width: 769px) {
+	.booking-form .booking-bg {
+		position: relative;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: -15px;
+		width: 100%;
+		margin: auto;
+	}
+	.booking-form>form {
+		margin-left: 0px;
+	}
+}

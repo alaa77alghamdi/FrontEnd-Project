@@ -16,12 +16,15 @@ export default function Home() {
     navigate("/about")    
   }
   const MusicEducation =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/musicEducation")    
   }
   const BookMusician =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/bookMusician")    
   }
   const MusicalInstruments =()=>{
+    document.documentElement.scrollTop=0;
     navigate("/musicalInstruments")    
   }
   const [ email , setEmail ] = useState<any>()

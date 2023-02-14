@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+/* font-family: 'Quicksand', sans-serif; */
+
+.services{
+    background-color:#f3f1e8;
+    font-family: 'Quicksand', sans-serif;
+
+    
+}
+.header1{
+  background-image: url("https://images.unsplash.com/photo-1465847899084-d164df4dedc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60" );
+}
+.header2{
+  background-image: url("https://images.unsplash.com/photo-1591025810539-a321000cda85?ixlib=rb-4.0.3&dpr=1&auto=format&fit=crop&w=1600&h=500&q=60" );
+}
+.header3{
+  background-image: url("https://images.unsplash.com/photo-1661449954871-b010f8cee6bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=60" );
+}
+  .header1, .header2, .header3{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .headerContent1{
+    background-color: #321e0f97;
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    padding: 100px  200px 0 200px;
+   
+  }
+  /* .header{
+    position: absolute;
+    top: 130px;
+    width: 50%;
+    text-align: center;
+    
+  } */
+
+  .title1{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 4rem;
+  color: white;
+  font-weight:900;
+  }
+  .description1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight:600;
+
+
+  }
+
+  /*-------------------------------Responsive-------------------------------*/
+@media only screen and (max-width: 800px) {
+  .headerContent1{
+    height: auto;
+    padding: 100px  150px 50px 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .headerContent1{
+    padding:50px 20px 50px 20px;
+  }
+  .title1{
+    font-size: 2rem;
+  }
+  .description1{
+    font-size: 1rem;
+  }
+}
