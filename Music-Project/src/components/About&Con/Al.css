@@ -154,18 +154,35 @@ textarea {
 
 
 @media only screen and (max-width: 900px) {
-  .form  {
-   padding: 10px;
-  }
+ .form{
+  padding-top:0;
 
+ }
+
+ h1{
+
+  font-size: 40;
+ }
 
 }
 
 
 @media only screen and (max-width: 390px) {
   .form  {
-   padding: 30px;
+   padding: 0px;
   }
 
 
 }
+
+@media only screen and (max-width: 320px) {
+  .form  {
+   padding: 0px;
+  }
+
+  .form h1  {
+font-size: 30px;   }
+}
+
+
+
