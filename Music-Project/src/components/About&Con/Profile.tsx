@@ -118,7 +118,7 @@ export default function SocialProfileWithImage() {
                   </Text>
                 ) : null}
                 <br></br>
-                {localStorage.getItem("nameInstrumemt") != null ? (
+                {localStorage.getItem("nameInstrument") != null ? (
                   <Text fontSize={"22"} color={"black.100"}>
                     Store:
                     <br></br>
