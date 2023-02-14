@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='serviceSection'>
+          <div className='serviceSection reverseServiceSection'>
             <div className='serviceContent right'>
               <h4>Book A Musician</h4>
               <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 

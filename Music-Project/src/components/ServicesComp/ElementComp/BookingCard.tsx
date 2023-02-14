@@ -36,6 +36,7 @@ function BookingCard() {
                             boxShadow='xl'
                             gap={20}
                             bg='#f3f1e8'
+                            mb='20'
                             >
                             <Image
                                 objectFit='cover'
@@ -48,7 +49,7 @@ function BookingCard() {
         
                             <Stack align='center'
                             >
-                                <CardBody align='center' width='500px'>
+                                <CardBody align='center'>
                                 <Heading size='md'>{musician.name}</Heading>
         
                                 <Text py='2'>
@@ -101,6 +102,8 @@ function BookingCard() {
                         boxShadow='xl'
                         gap={20}
                         bg='#f3f1e8'
+                        mb='20'
+
 
                         >
                         <Image
@@ -115,7 +118,7 @@ function BookingCard() {
                         <Stack align='center'>
                             <CardBody 
                             align='center'
-                            width='500px'>
+                            >
                             <Heading size='md'>{musician.name}</Heading>
     
                             <Text py='2'>
