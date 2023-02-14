@@ -12,12 +12,19 @@ import {
   useColorModeValue,
   Spacer,
   Divider,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useNavigate, Link } from "react-router-dom";
 
 import "./Al.css";
 
+
 export default function SocialProfileWithImage() {
+
+  
+
+const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
+
   const location = localStorage.getItem("location");
   const event = localStorage.getItem("event");
   const time = localStorage.getItem("time");
@@ -44,18 +51,22 @@ export default function SocialProfileWithImage() {
     <ChakraProvider>
     <Box bg={"#f3f1e8"}>
       <Heading
-        fontSize={"50"}
+        fontSize={"40"}
         color={"gray.500"}
         textAlign={"center"}
         paddingTop={30}
         fontFamily="Quicksand, sans-serif;"
       >
-        Profile
+        My Profile
       </Heading>
-      <Center py={150}>
+      <Center 
+      
+      py= {{ base: "80px", md: "70px", lg: "150" }}>
         <Box
           w={{ base: "150", md: "500", lg: "866px" }}
-          paddingTop="20"
+          padding= {{ base: "70px", md: "70px", lg: "70px" }}
+         
+          
           paddingBottom={10}
           bg={useColorModeValue("#FFFAF0", "gray.800")}
           boxShadow={"2xl"}
@@ -65,18 +76,7 @@ export default function SocialProfileWithImage() {
             border: "1px solid wihte",
           }}
         >
-          <Flex mt={{ base: -10, md: -29, lg: -13 }} justify={"center"}>
-            <Avatar
-              w={{ base: "40%", md: "50%", lg: "23%" }}
-              h={"25%"}
-              src={
-                "https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
-              }
-              css={{
-                border: "2px solid white",
-              }}
-            />
-          </Flex>
+        
 
           <Box p={6}>
             <Stack spacing={0} mb={5} align={"center"}>
@@ -90,7 +90,7 @@ export default function SocialProfileWithImage() {
               </Heading>
               <Text
                 color={"gray.500"}
-                paddingTop={4}
+                paddingTop={8}
                 fontFamily="Quicksand, sans-serif;"
               >
                 {localStorage.getItem("email")}{" "}
@@ -104,7 +104,7 @@ export default function SocialProfileWithImage() {
                 {localStorage.getItem("musicianName") != null ? (
                   <Text
                     color={"black.100"}
-                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                    fontSize={{ base: "20", md: "20", lg: "23" }}
                   >
                     Booking: <br></br>
                     instructor Name:{"   "} {"  "} {musicianName}
@@ -126,7 +126,7 @@ export default function SocialProfileWithImage() {
                 <br></br>
                 {localStorage.getItem("nameInstrument") != null ? (
                   <Text
-                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                    fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
                     Store:
@@ -142,7 +142,7 @@ export default function SocialProfileWithImage() {
 
                 {localStorage.getItem("instructorName") != null ? (
                   <Text
-                    fontSize={{ base: "20", md: "20", lg: "25" }}
+                    fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
                     Learing:

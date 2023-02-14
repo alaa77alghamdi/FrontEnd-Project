@@ -16,7 +16,9 @@ const Contact = () => {
   <input name="name" type="text" className="feedback-input" placeholder="Name" />   
   <input name="email" type="text" className="feedback-input" placeholder="Email" />
   <textarea name="text" className="feedback-input" placeholder="Comment"></textarea>
+  <div className="btn">
   <input type="submit" value="SUBMIT"/>
+  </div>
 </form>
 </div>
     </>

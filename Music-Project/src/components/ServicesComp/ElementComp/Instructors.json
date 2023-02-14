@@ -11,8 +11,8 @@
     {
         "id":2,
         "image":"https://images.unsplash.com/photo-1519139270028-ab664cf42264?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1600&q=60",
-        "name": "Jorej Michle",
-        "instruments":"Paino, Getar",
+        "name": "Henry Daniel",
+        "instruments":"Classical guitar",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
         "Price":100
@@ -20,8 +20,8 @@
     {
         "id":2,
         "image":"https://images.unsplash.com/photo-1501492765677-f07c5f3d87db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60",
-        "name": "Jorej Michle",
-        "instruments":"Paino, Getar",
+        "name": "Sebastian Logan",
+        "instruments":"Violin",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
         "Price":100
@@ -29,8 +29,8 @@
     {
         "id":3,
         "image":"https://media.istockphoto.com/id/611630716/photo/inspired-young-man-performing-music-on-guitar.jpg?s=170667a&w=0&k=20&c=F_ScvxCETNhtz5Njc6f3YVE9OxJT50EG9kk7tFiuT4M=",
-        "name": "Jorej Michle",
-        "instruments":"Paino, Getar",
+        "name": "Asher J",
+        "instruments":"Oboe, Saxophone",
         "Description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quasi incidunt laboriosam fuga",
         "AvailableTime": "Thursday, Wednesday, Friday",
         "Price":100
