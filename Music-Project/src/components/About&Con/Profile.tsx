@@ -29,20 +29,55 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
   const event = localStorage.getItem("event");
   const time = localStorage.getItem("time");
   const note = localStorage.getItem("note");
-  const nameInstrumemt = localStorage.getItem("nameInstrument");
+
+
+  const  locationLearning=localStorage.getItem("locationLearning");
+  const eventLearning=localStorage.getItem("eventLearning");
+  const timeLearning=localStorage.getItem("timeLearning");
+  const noteLearning=localStorage.getItem("noteLearning");
+
+  const instructorName = localStorage.getItem("instructorName");
   const instructorPrice = localStorage.getItem("instructorPrice");
+  
+
+
   const musicianPrice = localStorage.getItem("musicianPrice");
   const musicianName = localStorage.getItem("musicianName");
-  const instructorName = localStorage.getItem("instructorName");
+
+
+
+  const nameInstrumemt = localStorage.getItem("nameInstrument");
   const price = localStorage.getItem("price");
+
+
 
   const navigate = useNavigate();
 
-  const cancel = () => {
+  const cancelInstructor = () => {
+    if (confirm("Are you sure to cancel")) {
+    
+      localStorage.removeItem("instructorName");
+
+      navigate("/profile");
+    }
+  };
+
+
+  const cancelInstrument = () => {
+    if (confirm("Are you sure to cancel")) {
+   
+      localStorage.removeItem("nameInstrument");
+  
+
+      navigate("/profile");
+    }
+  };
+
+
+  const cancelMusician = () => {
     if (confirm("Are you sure to cancel")) {
       localStorage.removeItem("musicianName");
-      localStorage.removeItem("nameInstrument");
-      localStorage.removeItem("instructorName");
+  
 
       navigate("/profile");
     }
@@ -104,23 +139,32 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                 {localStorage.getItem("musicianName") != null ? (
                   <Text
                     color={"black.100"}
-                    fontSize={{ base: "20", md: "20", lg: "23" }}
+                    fontSize={{ base: "20", md: "20", lg: "21" }}
                   >
-                    Booking: <br></br>
-                    instructor Name:{"   "} {"  "} {musicianName}
+                   <span style={{fontWeight:'bold'}}>Booking</span>  <br></br>
+                    
+                    <span style={{fontWeight:'bold'}}>instructor Name:</span>{"   "} {"  "} {musicianName}
                     <br></br>
-                    location: {"   "}
+                    <span style={{fontWeight:'bold'}}>location:</span> {"   "}
                     {"  "}
                     {location}
                     <br></br>
-                    event: {"   "} {"  "} {event}
+                    <span style={{fontWeight:'bold'}}>event:</span>  {"   "} {"  "} {event}
                     <br></br>
-                    time: {"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}>time:</span>  {"   "} {"  "}
                     {time}
                     <br></br>
-                    note:{"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
                     {note}
-                    price: {musicianPrice}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {musicianPrice} SAR   {"  "}{"  "}per hour
+
+                    <Stack justify={"space-between"}>
+                  {localStorage.getItem("musicianName") != null ? (
+                    <Button onClick={cancelMusician} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
+                      Cancel
+                    </Button>
+                  ) : null}
+                </Stack>
                   </Text>
                 ) : null}
                 <br></br>
@@ -129,13 +173,21 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                    Store:
+                   <span style={{fontWeight:'bold'}}>Store</span> 
                     <br></br>
-                    name: {"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}>name:</span> {"   "} {"  "}
                     {nameInstrumemt}
                     <br></br>
-                    price: {"   "} {"  "}
-                    {price}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {"   "} {"  "} 
+                    {price} SAR 
+
+                    <Stack justify={"space-between"}>
+                  {localStorage.getItem("nameInstrument") != null ? (
+                    <Button onClick={cancelInstrument} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
+                      Cancel
+                    </Button>
+                  ) : null}
+                </Stack>
                   </Text>
                 ) : null}
                 <br></br>
@@ -145,23 +197,41 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                    Learing:
+                   <span style={{fontWeight:'bold'}}>Learing</span> 
                     <br></br>
-                    name: {"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}> name:</span>  {"   "} {"  "}
                     {instructorName}
                     <br></br>
-                    price: {"   "} {"  "}
-                    {price}
-                  </Text>
-                ) : null}
+                    <span style={{fontWeight:'bold'}}>location:</span> {"   "}
+                    {"  "}
+                    {locationLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>event:</span>  {"   "} {"  "} {eventLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>time:</span>  {"   "} {"  "}
+                    {timeLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
+                    {noteLearning}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {"   "} {"  "}
+                    {instructorPrice}SAR   {"  "}{"  "}per hour
 
-                <Stack justify={"space-between"}>
+
+                     <Stack justify={"space-between"}>
                   {localStorage.getItem("instructorName") != null ? (
-                    <Button onClick={cancel} bg={"#221409"} color={"white"}>
+                    <Button onClick={cancelInstructor} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
                       Cancel
                     </Button>
                   ) : null}
                 </Stack>
+                  </Text>
+
+                ) : null
+                
+                }
+                
+
+               
               </Stack>
             </Stack>
           </Box>
