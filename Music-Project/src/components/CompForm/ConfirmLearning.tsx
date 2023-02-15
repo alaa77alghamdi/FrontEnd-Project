@@ -31,7 +31,7 @@ function ConfirmLearning() {
 									<br></br> 
 									<br></br>
 									<p className='hh'>
-									Dear customer <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for EDUCATION A MUSIC service has been received .. We will contact with you.<br></br>
+									Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for EDUCATION A MUSIC service has been received .. We will contact with you.<br></br>
 									</p>
                                     
 									</div>
