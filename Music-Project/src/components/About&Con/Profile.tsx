@@ -17,6 +17,7 @@ import {
 import { useNavigate, Link } from "react-router-dom";
 
 import "./Al.css";
+import swal from 'sweetalert2'
 
 
 export default function SocialProfileWithImage() {
@@ -54,33 +55,86 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
   const navigate = useNavigate();
 
   const cancelInstructor = () => {
-    if (confirm("Are you sure to cancel")) {
-    
-      localStorage.removeItem("instructorName");
-
+    // if (confirm("Are you sure to cancel")) {
+    //   localStorage.removeItem("instructorName");
+    // navigate("/profile");
+    // }
+    swal.fire({
+      icon: 'question',
+      text: "Are you sure to cancel?",
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      // confirmButtonText: '<a href="/">OK</a>',
+      confirmButtonText: 'OK',
+      cancelButtonText:
+      'Cancel',
+  }).then((result: { isConfirmed: any; }) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("instructorName")
       navigate("/profile");
     }
+  })
   };
 
 
   const cancelInstrument = () => {
-    if (confirm("Are you sure to cancel")) {
-   
-      localStorage.removeItem("nameInstrument");
-  
-
-      navigate("/profile");
+    // if (confirm("Are you sure to cancel")) {
+    //   localStorage.removeItem("nameInstrument");
+    //   navigate("/profile");
+    // }
+    swal.fire({
+      icon: 'question',
+      text: "Are you sure to cancel?",
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      // confirmButtonText: '<a href="/">OK</a>',
+      confirmButtonText: 'OK',
+      cancelButtonText:
+      'Cancel',
+  }).then((result: { isConfirmed: any; }) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("nameInstrument")
+            navigate("/profile");
     }
-  };
+  })
+  }
 
 
   const cancelMusician = () => {
-    if (confirm("Are you sure to cancel")) {
-      localStorage.removeItem("musicianName");
-  
-
+    // if (confirm("Are you sure to cancel")) {
+    //   localStorage.removeItem("musicianName");
+    //   navigate("/profile");
+    // }
+    swal.fire({
+      icon: 'question',
+      text: "Are you sure to cancel?",
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      // confirmButtonText: '<a href="/">OK</a>',
+      confirmButtonText: 'OK',
+      cancelButtonText:
+      'Cancel',
+  }).then((result: { isConfirmed: any; }) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("musicianName")
       navigate("/profile");
     }
+  })
   };
   return (
     <ChakraProvider>
@@ -140,7 +194,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     color={"black.100"}
                     fontSize={{ base: "20", md: "20", lg: "21" }}
                   >
-                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Booking</Heading >  <br></br>
+                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Booking a Musician</Heading >  <br></br>
                     
                     <span style={{fontWeight:'bold'}}>instructor Name:</span>{"   "} {"  "} {musicianName}
                     <br></br>
@@ -155,6 +209,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     <br></br>
                     <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
                     {note}
+                    <br></br>
                     <span style={{fontWeight:'bold'}}>price:</span>  {musicianPrice} SAR   {"  "}{"  "}per hour
 
                     <Stack justify={"space-between"}>
@@ -174,7 +229,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Store</Heading> 
+                  <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Cart</Heading> 
                     <br></br>
                     <span style={{fontWeight:'bold'}}>name:</span> {"   "} {"  "}
                     {nameInstrumemt}
@@ -199,7 +254,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                    <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Learing</Heading> 
+                    <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Booking an Instructor</Heading> 
                     <br></br>
                     <span style={{fontWeight:'bold'}}> name:</span>  {"   "} {"  "}
                     {instructorName}
@@ -215,6 +270,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     <br></br>
                     <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
                     {noteLearning}
+                    <br></br>
                     <span style={{fontWeight:'bold'}}>price:</span>  {"   "} {"  "}
                     {instructorPrice}SAR   {"  "}{"  "}per hour
 

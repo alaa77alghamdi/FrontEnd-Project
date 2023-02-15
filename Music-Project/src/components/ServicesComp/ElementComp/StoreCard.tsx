@@ -38,14 +38,14 @@ import {
 //--------------------Modal-------------------
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const viewCart =()=>{
-          //redirect to profile
-          navigate('/profile')
-          localStorage.setItem("nameInstrument", name)
-          localStorage.setItem("img", img)
-          localStorage.setItem("desc", desc)
-          localStorage.setItem("price", price)
-  }
+  //   const viewCart =()=>{
+  //         //redirect to profile
+  //         navigate('/profile')
+  //         localStorage.setItem("nameInstrument", name)
+  //         localStorage.setItem("img", img)
+  //         localStorage.setItem("desc", desc)
+  //         localStorage.setItem("price", price)
+  // }
   const showAlert=()=>{
   swal.fire({
       icon: 'info',
@@ -57,10 +57,38 @@ import {
       background: '#f3f1e8',
       confirmButtonColor: '#221409',
       cancelButtonColor:'#221409',
-      confirmButtonText: '<a href="/logIn">OK</a>',
+      confirmButtonText: 'OK',
       cancelButtonText:
         'Cancel',
-    })
+    }).then((result: { isConfirmed: any; }) => {
+      if (result.isConfirmed) {
+        navigate('/logIn')
+      }})
+  }
+  const showConfirmAlert = ()=>{
+    swal.fire({
+      icon: 'success',
+      text: 'Instrument was added to the cart',
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      // confirmButtonText: '<a href="/">OK</a>',
+      confirmButtonText: 'View Cart',
+      cancelButtonText:
+      'Continue Shopping',
+  }).then((result: { isConfirmed: any; }) => {
+    if (result.isConfirmed) {
+      navigate('/profile')
+      localStorage.setItem("nameInstrument", name)
+      localStorage.setItem("img", img)
+      localStorage.setItem("desc", desc)
+      localStorage.setItem("price", price)
+    }
+  })
   }
     return (
       <ChakraProvider>
@@ -121,7 +149,8 @@ import {
               </Text>
               {localStorage.getItem('name') != null?
               (<Button 
-              onClick={onOpen}
+              // onClick={onOpen}
+              onClick={showConfirmAlert}
               variant='solid' 
               bg='#221409'
               color='white'
@@ -172,7 +201,7 @@ import {
                 Continue Shopping
               </Button>
               <Button
-              onClick={viewCart} 
+              // onClick={viewCart} 
               variant='ghost'
               _hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
               color='white'

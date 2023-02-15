@@ -30,10 +30,13 @@ function LearningCard() {
                     background: '#f3f1e8',
                     confirmButtonColor: '#221409',
                     cancelButtonColor:'#221409',
-                    confirmButtonText: '<a href="/logIn">OK</a>',
+                    confirmButtonText: 'OK',
                     cancelButtonText:
                     'Cancel',
-                })
+                }).then((result: { isConfirmed: any; }) => {
+                    if (result.isConfirmed) {
+                        navigate('/logIn')
+                    }})
 
         }
     }

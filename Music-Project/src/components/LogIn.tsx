@@ -36,11 +36,13 @@ export default function LogIn() {
             background: '#f3f1e8',
             confirmButtonColor: '#221409',
             cancelButtonColor:'#221409',
-            confirmButtonText: '<a href="/signUp">OK</a>',
+            confirmButtonText: 'OK',
             cancelButtonText:
               'Cancel',
-          })
-        //   navigate("/signUp")
+          }).then((result: { isConfirmed: any; }) => {
+            if (result.isConfirmed) {
+              navigate('/signUp')
+            }})
       }
   }
   const SignUp =()=>{
