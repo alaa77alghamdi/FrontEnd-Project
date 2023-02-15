@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert2'
 
 export default function LogIn() {
 
@@ -12,10 +13,34 @@ export default function LogIn() {
       if(name === nameValue){   
           navigate("/")
       }else if(name.length <3 || pass.length <3){
-          alert("Please, enter the correct information.")
+        //   alert("Please, enter the correct information.")
+        swal.fire({
+            icon: 'info',
+            text: 'Please, enter the correct information.',
+            iconColor: '#221409',
+            showCloseButton: true,
+            focusConfirm: false,
+            background: '#f3f1e8',
+            confirmButtonColor: '#221409',
+            confirmButtonText: 'OK',
+        })
       }else{
-          alert("Please, create a new account.")
-          navigate("/signUp")
+        //   alert("Please, create a new account.")
+        swal.fire({
+            icon: 'info',
+            text: "Please, create a new account.",
+            iconColor: '#221409',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            background: '#f3f1e8',
+            confirmButtonColor: '#221409',
+            cancelButtonColor:'#221409',
+            confirmButtonText: '<a href="/signUp">OK</a>',
+            cancelButtonText:
+              'Cancel',
+          })
+        //   navigate("/signUp")
       }
   }
   const SignUp =()=>{

@@ -6,6 +6,7 @@ import musicalInstruments from '../assets/musicalInstruments.jpeg'
 import musicEducation from '../assets/musicEducation.jpeg'
 import cello from '../assets/cello.mp4';
 import About from './About&Con/About';
+import swal from 'sweetalert2'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -30,11 +31,35 @@ export default function Home() {
   const [ email , setEmail ] = useState<any>()
   const HomePage =()=>{
     if(email == null) {
-      alert("Please, type an email for subscribe our news letter!")
+      // alert("Please, type an email for subscribe our news letter!")
+      swal.fire({
+        icon: 'info',
+        text: "Please, type an email for subscribe our news letter!",
+        iconColor: '#221409',
+        showCloseButton: true,
+        // showCancelButton: true,
+        focusConfirm: false,
+        background: '#f3f1e8',
+        confirmButtonColor: '#221409',
+        cancelButtonColor:'#221409',
+        confirmButtonText: 'OK',
+        // cancelButtonText:
+        //   'Cancel',
+      })
     } else {
-      alert("Thank You For Subscribing!")
-      document.documentElement.scrollTop = 0; 
-      location.reload();
+      //alert("Thank You For Subscribing!")
+      swal.fire({
+        icon: 'success',
+        text: "Thank You For Subscribing!",
+        iconColor: '#221409',
+        showCloseButton: true,
+        focusConfirm: false,
+        background: '#f3f1e8',
+        confirmButtonColor: '#221409',
+        confirmButtonText: 'OK',
+      })
+      // document.documentElement.scrollTop = 0; 
+      // location.reload();
     }  
   }
   return (

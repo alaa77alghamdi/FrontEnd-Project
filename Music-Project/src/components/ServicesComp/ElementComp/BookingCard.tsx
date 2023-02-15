@@ -6,6 +6,7 @@ import { ChakraProvider,
 import '../Services.css'
 import musiciansList from './Musicians.json' 
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert2'
 
 function BookingCard() {
     const [musicians, setMusicians]= React.useState(musiciansList)
@@ -21,7 +22,20 @@ function BookingCard() {
             
         }else{
             //redirect to logIn
-            navigate('/logIn')
+            swal.fire({
+                icon: 'info',
+                text: 'Please, you need Log In first',
+                iconColor: '#221409',
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                background: '#f3f1e8',
+                confirmButtonColor: '#221409',
+                cancelButtonColor:'#221409',
+                confirmButtonText: '<a href="/logIn">OK</a>',
+                cancelButtonText:
+                'Cancel',
+            })
         }
     }
   return (
