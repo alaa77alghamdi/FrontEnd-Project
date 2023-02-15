@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/white-logo.png'
 
+
 export default function Nav() {
   const navigate = useNavigate()
   const HomePage =()=>{
@@ -24,14 +25,20 @@ export default function Nav() {
     }
     navigate("/")
   }
+  
   return (
     <nav>
       <div className='mainNav'>
         <div className='navBar'>
+
+          <input id="menu-toggle" type="checkbox" />
+            <label className='menu-button-container' htmlFor="menu-toggle">
+            <div className='menu-button'></div>
+          </label>
+
           <img src={logo} alt="" onClick={HomePage}/>
-          <ul>
+          <ul className="menu">
             <li><Link to='/'>HOME </Link></li>
-            <li>|</li>
             <li className='dropdown'> 
               SERVICES ⌵
               <div className='dropdownContent'>
@@ -40,9 +47,7 @@ export default function Nav() {
                 <Link to='/musicalInstruments'>Musical Instruments</Link>
               </div>
             </li>
-            <li>|</li>
             <li><Link to='/about'> ABOUT </Link></li>
-            <li>|</li>
             <li><Link to='/contact'> CONTACT </Link></li>
           </ul>
         </div>

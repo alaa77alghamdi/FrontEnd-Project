@@ -7,6 +7,8 @@ import musicEducation from '../assets/musicEducation.jpeg'
 import cello from '../assets/cello.mp4';
 import About from './About&Con/About';
 
+import swal from 'sweetalert2';
+
 export default function Home() {
   const navigate = useNavigate()
   const SignUp =()=>{
@@ -32,9 +34,9 @@ export default function Home() {
     if(email == null) {
       alert("Please, type an email for subscribe our news letter!")
     } else {
-      alert("Thank You For Subscribing!")
-      document.documentElement.scrollTop = 0; 
-      location.reload();
+      swal.fire("Thank You For Subscribing!")
+      
+      
     }  
   }
   return (
