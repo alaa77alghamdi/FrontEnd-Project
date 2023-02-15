@@ -5,6 +5,7 @@ import { ChakraProvider,
         CardBody, CardFooter, Stack, Image, Heading, Text,Button, ListItem, List,} from '@chakra-ui/react'
 import instructorList from './Instructors.json' 
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert2'
 
 function LearningCard() {
     const [instructors, setInstructors]= React.useState(instructorList)
@@ -19,7 +20,24 @@ function LearningCard() {
             localStorage.setItem("instructorImage",img )
         }else{
             //redirect to logIn
-            navigate('/logIn')
+                swal.fire({
+                    icon: 'info',
+                    text: 'Please, you need Log In first',
+                    iconColor: '#221409',
+                    showCloseButton: true,
+                    showCancelButton: true,
+                    focusConfirm: false,
+                    background: '#f3f1e8',
+                    confirmButtonColor: '#221409',
+                    cancelButtonColor:'#221409',
+                    confirmButtonText: 'OK',
+                    cancelButtonText:
+                    'Cancel',
+                }).then((result: { isConfirmed: any; }) => {
+                    if (result.isConfirmed) {
+                        navigate('/logIn')
+                    }})
+
         }
     }
     

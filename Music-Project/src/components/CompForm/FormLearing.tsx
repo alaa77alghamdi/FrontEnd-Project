@@ -5,15 +5,16 @@ import { useNavigate } from 'react-router-dom'
 export default function FormLearing() {
 
 	const[location,setLocation]=React. useState('')
-	const[event,setEvent]=React. useState('')
+	const[level,setlevel]=React. useState('')
 	const[time,setTime]=React. useState('')
+	const[date,setDate]=React. useState('')
 	const[note,setnote]=React. useState('')
 	const navigate = useNavigate()
 	const confirmLearning=()=>{
-		localStorage.setItem('location',location)
-		localStorage.setItem('event',event)
-		localStorage.setItem('time',time)
-		localStorage.setItem('note',note)
+		localStorage.setItem('locationLearning',location)
+		localStorage.setItem('levelLearning',level)
+		localStorage.setItem('timeLearning',time)
+		localStorage.setItem('noteLearning',note)
 		 navigate('/confirmEducation')
 	}
 
@@ -33,41 +34,78 @@ export default function FormLearing() {
 							</div>
 						</div>
 						<form>
+							<br></br>
               {/* start1 */}
+			  
 							<div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Location</span>
-										<input className="form-control" required onChange={e=> setLocation(e.target.value)} />
+										<input className="form-control" onChange={e=> setLocation(e.target.value)}  />
 									</div>
 								</div>
 							</div>
+							<br></br>
               {/* end 1 */}
 
               {/* start2 */}
-              {/* <div className="row">
+			  
+			 
+              <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label"> Event </span>
-										<input className="form-control"  required onChange={e=> setEvent(e.target.value)} />
+										<span className="form-label"> Level </span>
+										<select className='timeoption' value ={time} onChange={e=> setTime(e.target.value)}>
+											<option></option>
+											<option value="BEGINNER">BEGINNER</option>
+											<option value="INTERMEDIATE">INTERMEDIATE</option>
+											<option value='ADVANCED'>ADVANCED</option>
+										</select>
+										{/* <input className="form-control" onChange={e=> setEvent(e.target.value)} required/> */}
 									</div>
 								</div>
-							</div> */}
+				</div>
+				<br></br>
 
               {/* end2 */}
+
+			  				{/* ----------------- */}
+								
+
+				<div className="row">
+								<div className="col-md-6">
+									<div className="form-group">
+										<span className="form-label"> Time </span>
+										<input className="form-control"   onChange={e=> setTime(e.target.value)} />
+									</div>
+								</div>
+				</div>
+ 
+
+				
+
+
+
+				<br></br>
+
+
+
+
+				{/* ----------------------- */}
 
               {/* start3 */}
 
               <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label">Time</span>
-										<input className="form-control" type="date" required  onChange={e=> setTime(e.target.value)}/>
+										<span className="form-label">Date</span>
+										<input className="form-control" type="date" required  onChange={e=> setDate(e.target.value)}/>
 									</div>
 								</div>
 							</div>
-
+							
               {/* end3 */}
+					<br></br>
 
               {/* start4 */}
 
@@ -75,20 +113,17 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Note</span>
-										<input className="form-control"  onChange={e=> setnote(e.target.value)} />
+										<input className="form-control"  onChange={e=> setnote(e.target.value)} required />
 									</div>
 								</div>
-							</div>
-
+				</div>
+							 
               {/* end4 */}
 
 
 
 
-              {/* button */}
-				{/* <div  className='logIn-fieldset'>
-			  <button type='submit'>Log In</button>
-				</div> */}
+             
 							<div className="form-btn">
 								<button className="submit-btn" 
 								onClick={confirmLearning}>SEND</button>

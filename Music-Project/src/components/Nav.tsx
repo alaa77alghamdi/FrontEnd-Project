@@ -2,6 +2,7 @@ import { List } from '@chakra-ui/react';
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/white-logo.png'
+import swal from 'sweetalert2'
 
 
 export default function Nav() {
@@ -19,11 +20,31 @@ export default function Nav() {
     navigate("/profile")    
   }
   const SingOut =()=>{
-    if(confirm('Are you sure to logout?')) {
-      localStorage.removeItem('name');
-      navigate("/")
+    // if(confirm('Are you sure to logout?')) {
+    //   localStorage.removeItem('name');
+    //   navigate("/")
+    // }
+    // navigate("/")
+    swal.fire({
+      icon: 'question',
+      text: 'Are you sure to logout?',
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      // confirmButtonText: '<a href="/">OK</a>',
+      confirmButtonText: 'OK',
+      cancelButtonText:
+      'Cancel',
+  }).then((result: { isConfirmed: any; }) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("name")
+      navigate("/");
     }
-    navigate("/")
+  })
   }
   
   return (

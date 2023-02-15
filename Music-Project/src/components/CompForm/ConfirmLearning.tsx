@@ -2,10 +2,10 @@ import React from 'react'
 
 function ConfirmLearning() {
     const name=localStorage.getItem('name')
-	const location =localStorage.getItem('location')
-	const event =localStorage.getItem('event')
-	const time =localStorage.getItem('time')	
-	const note =localStorage.getItem('note')
+	const location =localStorage.getItem('locationLearning')
+	const event =localStorage.getItem('eventLearning')
+	const time =localStorage.getItem('timeLearning')	
+	const note =localStorage.getItem('noteLearning')
 		
 	
 
@@ -19,7 +19,7 @@ function ConfirmLearning() {
 					<div className="booking-form">
 						<div className="booking-bg">
 							<div className="form-header">
-								<h2>EDUCATION A MUSIC</h2>
+								<h2 className='mueduction'>MUSIC EDUCATION</h2>
 								{/* <p>- Your reservation has been confirmed successfully </p> */}
 							</div>
 						</div>
@@ -30,7 +30,9 @@ function ConfirmLearning() {
 									<div className="form-group">
 									<br></br> 
 									<br></br>
-									Dear customer <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your reservation for EDUCATION A MUSIC service has been confirmed.<br></br>
+									<p className='hh'>
+									Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for MUSIC EDUCATION service has been received .. We will contact with you.<br></br>
+									</p>
                                     
 									</div>
 								</div>

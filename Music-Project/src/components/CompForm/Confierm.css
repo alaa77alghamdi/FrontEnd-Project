@@ -70,7 +70,7 @@
 }
 
 .booking-form .form-header h2 {
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	/* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 	margin-top: 0;
 	margin-bottom: 15px;
 	font-weight: 900;
@@ -88,6 +88,8 @@
 	
 }
 
+
+
 .booking-form .form-group {
 	position: relative;
 	margin-bottom: 30%;
@@ -96,6 +98,8 @@
 	padding-bottom: 100px;
 	
 }
+
+
 
 @media only screen and (max-width: 769px) {
 	.booking-form .booking-bg {
