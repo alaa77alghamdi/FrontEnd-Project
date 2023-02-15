@@ -19,8 +19,10 @@ function About() {
   return (
     <ChakraProvider>
     <Flex
-width={"99.91vw"} height={"86.75vh"} alignContent={"center"} 
-    >
+width={["100vw,50vw"]}  alignContent={"center"} 
+height={{ base: "3xl", md: "4xl", lg: "83vh" }}
+  
+  >
        <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={0}
@@ -48,7 +50,7 @@ width={"99.91vw"} height={"86.75vh"} alignContent={"center"}
        
         <chakra.h1
           mb={6}
-          fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}
+          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
           color="brand.600"
           _dark={{ color: "gray.300" }}
@@ -62,17 +64,14 @@ width={"99.91vw"} height={"86.75vh"} alignContent={"center"}
         <chakra.p
           pr={{ base: 0, lg: 16 }}
           mb={4}
-          fontSize="20"
+          fontSize={{ base: "1xl", md: "2xl", lg: "2xl" }}
           color="brand.600"
           _dark={{ color: "gray.400" }}
           letterSpacing="wider"
           fontFamily= 'Quicksand, sans-serif;'
 
         >
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-    Eum animi voluptate deleniti praesentium est, aliquam sapiente 
-    laborum culpa eos consequuntur alias modi exercitationem, 
-    rerum ea explicabo assumenda ipsam mollitia totam.
+    We are a team that worked on making a platform  that combines booking musicians for event and teaching music to everyone, as well as selling used musical instruments to whomever needs them. Our goal is for our site to reach all those who are interested in music and its arts
         </chakra.p>
       </Flex>
       <Box  >

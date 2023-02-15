@@ -12,31 +12,72 @@ import {
   useColorModeValue,
   Spacer,
   Divider,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useNavigate, Link } from "react-router-dom";
 
-
 import "./Al.css";
 
+
 export default function SocialProfileWithImage() {
+
+  
+
+const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
+
   const location = localStorage.getItem("location");
   const event = localStorage.getItem("event");
   const time = localStorage.getItem("time");
   const note = localStorage.getItem("note");
-  const nameInstrumemt = localStorage.getItem("nameInstrumemt");
+
+
+  const  locationLearning=localStorage.getItem("locationLearning");
+  const eventLearning=localStorage.getItem("eventLearning");
+  const timeLearning=localStorage.getItem("timeLearning");
+  const noteLearning=localStorage.getItem("noteLearning");
+
+  const instructorName = localStorage.getItem("instructorName");
   const instructorPrice = localStorage.getItem("instructorPrice");
+  
+
+
   const musicianPrice = localStorage.getItem("musicianPrice");
   const musicianName = localStorage.getItem("musicianName");
-  const instructorName = localStorage.getItem("instructorName");
+
+
+
+  const nameInstrumemt = localStorage.getItem("nameInstrument");
   const price = localStorage.getItem("price");
+
+
 
   const navigate = useNavigate();
 
-  const cancel = () => {
+  const cancelInstructor = () => {
+    if (confirm("Are you sure to cancel")) {
+    
+      localStorage.removeItem("instructorName");
+
+      navigate("/profile");
+    }
+  };
+
+
+  const cancelInstrument = () => {
+    if (confirm("Are you sure to cancel")) {
+   
+      localStorage.removeItem("nameInstrument");
+  
+
+      navigate("/profile");
+    }
+  };
+
+
+  const cancelMusician = () => {
     if (confirm("Are you sure to cancel")) {
       localStorage.removeItem("musicianName");
-      localStorage.removeItem("nameInstrumemt");
-      localStorage.removeItem("instructorName");
+  
 
       navigate("/profile");
     }
@@ -45,103 +86,155 @@ export default function SocialProfileWithImage() {
     <ChakraProvider>
     <Box bg={"#f3f1e8"}>
       <Heading
-        fontSize={"20"}
+        fontSize={"40"}
         color={"gray.500"}
         textAlign={"center"}
-        paddingTop={15}
-        fontFamily= 'Quicksand, sans-serif;'
+        paddingTop={30}
+        fontFamily="Quicksand, sans-serif;"
       >
-        Tikct
+       {localStorage.getItem("name")}'s  Profile
       </Heading>
-      <Center py={90}>
+      <Center 
+      
+      py= {{ base: "80px", md: "70px", lg: "150" }}>
         <Box
-          maxW={"766px"}
-          paddingTop="40"
+          w={{ base: "150", md: "500", lg: "866px" }}
+          padding= {{ base: "70px", md: "70px", lg: "70px" }}
+         
+          
           paddingBottom={10}
-          w={"full"}
-          bg={useColorModeValue("white", "gray.800")}
+          bg={useColorModeValue("#FFFAF0", "gray.800")}
           boxShadow={"2xl"}
           rounded={"md"}
           overflow={"hidden"}
           css={{
-            border: "2px solid wihte",
+            border: "1px solid wihte",
           }}
         >
-          <Flex mt={-12} justify={"center"}>
-            <Avatar
-              size={"x2"}
-              src={
-                "https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
-              }
-              css={{
-                border: "2px solid white",
-              }}
-            />
-          </Flex>
+        
 
           <Box p={6}>
             <Stack spacing={0} mb={5} align={"center"}>
               <Heading
-                fontSize={"28"}
+                fontSize={{ base: "40", md: "40", lg: "40" }}
                 fontWeight={1100}
-                paddingTop={4}
-                fontFamily= 'Quicksand, sans-serif;'
-
+                fontFamily="Quicksand, sans-serif;"
               >
                 {localStorage.getItem("name")}{" "}
               </Heading>
-              <Text color={"gray.500"} paddingTop={4}  fontFamily= 'Quicksand, sans-serif;'>
-                alaa@hotmail.com""fake"
+              <Text
+                color={"gray.500"}
+                paddingTop={8}
+                fontFamily="Quicksand, sans-serif;"
+                fontSize={{ base: "30", md: "30", lg: "30" }} >
+                {localStorage.getItem("email")}{" "}
               </Text>
             </Stack>
             <Divider orientation="horizontal" />
             <br></br>
 
             <Stack direction={"row"} justifyContent={"center"}>
-              <Stack  fontFamily= 'Quicksand, sans-serif;'>
+              <Stack fontFamily="Quicksand, sans-serif;">
                 {localStorage.getItem("musicianName") != null ? (
-                  <Text fontSize={"20"} >
-                    Booking: <br></br>
-                    instructor Name:{"   "} {"  "} {musicianName}
+                  <Text
+                    color={"black.100"}
+                    fontSize={{ base: "20", md: "20", lg: "21" }}
+                  >
+                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Booking</Heading >  <br></br>
+                    
+                    <span style={{fontWeight:'bold'}}>instructor Name:</span>{"   "} {"  "} {musicianName}
                     <br></br>
-                    location: {"   "}
+                    <span style={{fontWeight:'bold'}}>location:</span> {"   "}
                     {"  "}
                     {location}
                     <br></br>
-                    event: {"   "} {"  "} {event}
+                    <span style={{fontWeight:'bold'}}>event:</span>  {"   "} {"  "} {event}
                     <br></br>
-                    time: {"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}>time:</span>  {"   "} {"  "}
                     {time}
                     <br></br>
-                    note:{"   "} {"  "}
+                    <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
                     {note}
-                    price: {musicianPrice}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {musicianPrice} SAR   {"  "}{"  "}per hour
+
+                    <Stack justify={"space-between"}>
+                    <br></br>
+                  {localStorage.getItem("musicianName") != null ? (
+                    
+                    <Button onClick={cancelMusician} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
+                      Cancel
+                    </Button>
+                  ) : null}
+                </Stack>
                   </Text>
                 ) : null}
                 <br></br>
-                {localStorage.getItem("nameInstrumemt") != null ? (
-                  <Text fontSize={"22"} color={"black.100"}>
-                    Store:
+                {localStorage.getItem("nameInstrument") != null ? (
+                  <Text
+                    fontSize={{ base: "20", md: "20", lg: "23" }}
+                    color={"black.100"}
+                  >
+                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Store</Heading> 
                     <br></br>
-                    name: {"   "} {"  "}{nameInstrumemt}
+                    <span style={{fontWeight:'bold'}}>name:</span> {"   "} {"  "}
+                    {nameInstrumemt}
                     <br></br>
-                    price: {"   "} {"  "}{price}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {"   "} {"  "} 
+                    {price} SAR 
+
+                    <Stack justify={"space-between"}>
+                    <br></br>
+                  {localStorage.getItem("nameInstrument") != null ? (
+                    <Button onClick={cancelInstrument} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
+                      Cancel
+                    </Button>
+                  ) : null}
+                </Stack>
                   </Text>
                 ) : null}
+                <br></br>
 
                 {localStorage.getItem("instructorName") != null ? (
-                  <Text fontSize={"20"} color={"black.100"}>
-                    Learing:
+                  <Text
+                    fontSize={{ base: "20", md: "20", lg: "23" }}
+                    color={"black.100"}
+                  >
+                    <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Learing</Heading> 
                     <br></br>
-                    name: {"   "} {"  "}{instructorName}
+                    <span style={{fontWeight:'bold'}}> name:</span>  {"   "} {"  "}
+                    {instructorName}
                     <br></br>
-                    price: {"   "} {"  "}{price}
-                  </Text>
-                ) : null}
+                    <span style={{fontWeight:'bold'}}>location:</span> {"   "}
+                    {"  "}
+                    {locationLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>event:</span>  {"   "} {"  "} {eventLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>time:</span>  {"   "} {"  "}
+                    {timeLearning}
+                    <br></br>
+                    <span style={{fontWeight:'bold'}}>note:</span>{"   "} {"  "}
+                    {noteLearning}
+                    <span style={{fontWeight:'bold'}}>price:</span>  {"   "} {"  "}
+                    {instructorPrice}SAR   {"  "}{"  "}per hour
 
-                <Stack justify={"space-between"}>
-                  <Button onClick={cancel}>Cancel</Button>{" "}
+
+                     <Stack justify={"space-between"}>
+                     <br></br>
+                  {localStorage.getItem("instructorName") != null ? (
+                    <Button onClick={cancelInstructor} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
+                      Cancel
+                    </Button>
+                  ) : null}
                 </Stack>
+                  </Text>
+
+                ) : null
+                
+                }
+                
+
+               
               </Stack>
             </Stack>
           </Box>

@@ -11,11 +11,10 @@ export default function FormLearing() {
 	const[note,setnote]=React. useState('')
 	const navigate = useNavigate()
 	const confirmLearning=()=>{
-		localStorage.setItem('location',location)
-		localStorage.setItem('level',level)
-		localStorage.setItem('time',time)
-		localStorage.setItem('date',date)
-		localStorage.setItem('note',note)
+		localStorage.setItem('locationLearning',location)
+		localStorage.setItem('levelLearning',level)
+		localStorage.setItem('timeLearning',time)
+		localStorage.setItem('noteLearning',note)
 		 navigate('/confirmEducation')
 	}
 
