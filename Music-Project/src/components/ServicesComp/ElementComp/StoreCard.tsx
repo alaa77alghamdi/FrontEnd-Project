@@ -23,6 +23,7 @@ import {
     
   } from '@chakra-ui/react'
   import { CheckCircleIcon } from '@chakra-ui/icons'
+  import swal from 'sweetalert2'
 
   interface CardProp {
     img:string;
@@ -44,6 +45,22 @@ import {
           localStorage.setItem("img", img)
           localStorage.setItem("desc", desc)
           localStorage.setItem("price", price)
+  }
+  const showAlert=()=>{
+  swal.fire({
+      icon: 'info',
+      text: 'Please, you need Log In first',
+      iconColor: '#221409',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      background: '#f3f1e8',
+      confirmButtonColor: '#221409',
+      cancelButtonColor:'#221409',
+      confirmButtonText: '<a href="/logIn">OK</a>',
+      cancelButtonText:
+        'Cancel',
+    })
   }
     return (
       <ChakraProvider>
@@ -115,7 +132,11 @@ import {
               </Button>)
               :
               (<Button 
-              onClick={()=>navigate('/logIn')}
+              // onClick={()=> {
+              //   alert("please you need Log In first")
+              //   navigate('/logIn')
+              // }}
+              onClick={showAlert}
               variant='solid' 
               bg='#221409'
               color='white'
@@ -134,7 +155,7 @@ import {
           <ModalOverlay />
 
           <ModalContent >
-            <ModalHeader align='center'>
+            <ModalHeader  align='center'>
             <CheckCircleIcon boxSize={8} color='#221409' mt='5' />
             </ModalHeader>
             <ModalCloseButton />

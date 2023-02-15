@@ -12,7 +12,8 @@ export default function Store() {
      <div className="header3" >
       <div className="headerContent1">
         <h1 className='title1' >Musical Instruments</h1> 
-            <h2 className='description1' >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas illum, repudiandae omnis voluptatem impedit provident quaerat sed nostrum reiciendis aspernatur ipsum deleniti laudantium ullam! </h2>
+            <h2 className='description1' >
+              Here is a <span style={{fontWeight:'bold'}}>Musical Instruments Store</span> where you will shop our selection of instruments, musical equipment & supplies that have been used before and are still in good condition. Get the lowest prices & free shipping on most orders. </h2>
             </div>
           
       </div>

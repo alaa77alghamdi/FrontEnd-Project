@@ -11,7 +11,7 @@ function Booking( ) {
      <div className="header1" >
       <div className="headerContent1">
         <h1 className='title1' >Booking a Musician</h1> 
-            <h2 className='description1' >Music expresses that which cannot be put into words and that which cannot remain silent
+            <h2 className='description1' >Hire musicians, guitarists, saxophonists, harpists, and violinists, for weddings and events. Book today our musicians for your event, party, or wedding in a few clicks! 
  </h2>
 
             </div>
