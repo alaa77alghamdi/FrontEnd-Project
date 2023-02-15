@@ -84,10 +84,10 @@ export default function Home() {
         <section className='aboutSectionBg'>
           <div className='aboutSection'>
             <h2> <i>Welcome to </i> The Musical Community</h2>
-            <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
-                No matter what culture we're from, everyone loves music.
+            <p>We are a team that worked on making a platform  that combines booking musicians for event and teaching music to everyone, 
+              as well as selling used musical instruments to whomever needs them. Our goal is for our site to reach all those who are interested in music and its arts
             </p>
-            <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
+            <p>We think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
               No matter what culture we're from, everyone loves music.
             </p>
             <button onClick={About}>READ MORE</button>
@@ -102,10 +102,9 @@ export default function Home() {
             <img src={musicEducation} alt="" />
             <div className='serviceContent'>
               <h4>Music Education</h4>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
-                No matter what culture we're from, everyone loves music.
+              <p>Our goal is to combine the fun of learning and the arts of music with the best teachers, so that students can benefit from a wonderful musical experience.
               </p>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
+              <p>We think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
               <button onClick={MusicEducation}>READ MORE</button>
@@ -115,10 +114,8 @@ export default function Home() {
           <div className='serviceSection reverseServiceSection'>
             <div className='serviceContent right'>
               <h4>Book A Musician</h4>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
-                No matter what culture we're from, everyone loves music.
-              </p>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
+              <p>Hire musicians, guitarists, saxophonists, harpists, and violinists, for weddings and events. Book today our musicians for your event, party, or wedding in a few clicks!</p>
+              <p>We think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
               <button onClick={BookMusician}>READ MORE</button>
@@ -130,10 +127,10 @@ export default function Home() {
             <img src={musicalInstruments} alt="" />
             <div className='serviceContent'>
               <h4>Musical Instruments</h4>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
-                No matter what culture we're from, everyone loves music.
+              <p>Here is a Musical Instruments Store where you will shop our selection of instruments, 
+                musical equipment & supplies that have been used before and are still in good condition. Get the lowest prices & free shipping on most orders.
               </p>
-              <p>I think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
+              <p>We think music in itself is healing. It's an explosive expression of humanity. It's something we are all touched by. 
                 No matter what culture we're from, everyone loves music.
               </p>
               <button onClick={MusicalInstruments}>READ MORE</button>
