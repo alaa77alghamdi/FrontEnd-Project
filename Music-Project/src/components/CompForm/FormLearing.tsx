@@ -45,14 +45,14 @@ export default function FormLearing() {
               {/* end 1 */}
 
               {/* start2 */}
-              {/* <div className="row">
+              <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label"> Event </span>
+										<span className="form-label"> Time </span>
 										<input className="form-control"  required onChange={e=> setEvent(e.target.value)} />
 									</div>
 								</div>
-							</div> */}
+				</div>
 
               {/* end2 */}
 
@@ -61,7 +61,7 @@ export default function FormLearing() {
               <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label">Time</span>
+										<span className="form-label">Date</span>
 										<input className="form-control" type="date" required  onChange={e=> setTime(e.target.value)}/>
 									</div>
 								</div>

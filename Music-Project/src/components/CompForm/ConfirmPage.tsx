@@ -30,7 +30,8 @@ export default function ConfirmPage() {
 									<div className="form-group">
 									<br></br> 
 									<br></br>
-								Dear customer <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your reservation for a music booking service has been confirmed.<br></br>
+									<p className='hh'>
+								Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for a MUSIC BOOKING service has been receved .. We will contact with you.<br></br></p>
                                     
 									</div>
 								</div>

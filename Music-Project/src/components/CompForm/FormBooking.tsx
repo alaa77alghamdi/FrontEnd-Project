@@ -2,6 +2,7 @@ import React from 'react'
 // import  './Confierm.css'
 import  './forms.css'
 import { useNavigate } from 'react-router-dom'
+import { ChakraProvider } from '@chakra-ui/react'
 function FormBooking() {
 	const[location,setLocation]=React. useState('')
 	const[event,setEvent]=React. useState('')
@@ -16,6 +17,7 @@ function FormBooking() {
 		 navigate('/confirmBooking')
 	}
   return (
+	
     <div>
 
         
@@ -46,11 +48,11 @@ function FormBooking() {
               <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label"> Event </span>
+										<span className="form-label"> Event Type </span>
 										<input className="form-control" onChange={e=> setEvent(e.target.value)} required/>
 									</div>
 								</div>
-							</div>
+				</div>
 
               {/* end2 */}
 
@@ -59,13 +61,28 @@ function FormBooking() {
               <div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<span className="form-label"> Time</span>
+										<span className="form-label"> Date</span>
 										<input className="form-control" type="date"onChange={e=> setTime(e.target.value)} required />
 									</div>
 								</div>
 							</div>
 
               {/* end3 */}
+
+			  <div className="row">
+								<div className="col-md-6">
+									<div className="form-group">
+										<span className="form-label"> Time </span>
+										<select>
+											<option></option>
+											<option>From 3 to 6 PM</option>
+											<option>From 6 to 8 PM</option>
+											<option>From 9 to 12 PM</option>
+										</select>
+										{/* <input className="form-control" onChange={e=> setEvent(e.target.value)} required/> */}
+									</div>
+								</div>
+				</div>
 
               {/* start4 */}
 
@@ -101,6 +118,7 @@ function FormBooking() {
 
 
     </div>
+	
   )
 }
 
