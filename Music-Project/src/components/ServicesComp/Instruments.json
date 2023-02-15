@@ -14,24 +14,24 @@
     {
       "img":"https://images.unsplash.com/photo-1554446422-c4d46271ab85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1600&q=60",
       "name":"Piano",
-      "desc":"lorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdklorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdk",
+      "desc":"The piano buttons work well. The piano is 5 years old",
       "price":2000
     },
     {
       "img":"https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60",
       "name":"Electric guitar",
-      "desc":"lorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdklorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdk",
+      "desc":"Guitar has only been used twice",
       "price":1590
     },
     {
       "img":"https://images.unsplash.com/photo-1530917203633-106d4a1a0967?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bXVzaWNhbCUyMGluc3RydW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1600&q=60",
       "name":"Drum",
-      "desc":"lorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdklorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdk",
+      "desc":"Drum with a very clear sound. It was bought two years ago",
       "price":1200
     }, {
       "img":"https://images.unsplash.com/photo-1573871666457-7c7329118cf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWNhbCUyMGluc3RydW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1600&q=60",
       "name":"Trumpet",
-      "desc":"lorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdklorenadmlorenadmvvlorenadmlorenadm,jkhgkkdlslalmxmkmmkdcnjdjkfkdk",
+      "desc":"A clean and well sterilized trumpet used only twice in a private party",
       "price":1200
     }
     
