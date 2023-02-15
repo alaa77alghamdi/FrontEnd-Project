@@ -141,7 +141,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     color={"black.100"}
                     fontSize={{ base: "20", md: "20", lg: "21" }}
                   >
-                   <span style={{fontWeight:'bold'}}>Booking</span>  <br></br>
+                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Booking</Heading >  <br></br>
                     
                     <span style={{fontWeight:'bold'}}>instructor Name:</span>{"   "} {"  "} {musicianName}
                     <br></br>
@@ -159,7 +159,9 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     <span style={{fontWeight:'bold'}}>price:</span>  {musicianPrice} SAR   {"  "}{"  "}per hour
 
                     <Stack justify={"space-between"}>
+                    <br></br>
                   {localStorage.getItem("musicianName") != null ? (
+                    
                     <Button onClick={cancelMusician} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
                       Cancel
                     </Button>
@@ -173,7 +175,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                   <span style={{fontWeight:'bold'}}>Store</span> 
+                   <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Store</Heading> 
                     <br></br>
                     <span style={{fontWeight:'bold'}}>name:</span> {"   "} {"  "}
                     {nameInstrumemt}
@@ -182,6 +184,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     {price} SAR 
 
                     <Stack justify={"space-between"}>
+                    <br></br>
                   {localStorage.getItem("nameInstrument") != null ? (
                     <Button onClick={cancelInstrument} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
                       Cancel
@@ -197,7 +200,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     fontSize={{ base: "20", md: "20", lg: "23" }}
                     color={"black.100"}
                   >
-                   <span style={{fontWeight:'bold'}}>Learing</span> 
+                    <Heading  textAlign='center'fontSize={{ base: "25", md: "25", lg: "27" }} style={{fontWeight:'bold'}} >Learing</Heading> 
                     <br></br>
                     <span style={{fontWeight:'bold'}}> name:</span>  {"   "} {"  "}
                     {instructorName}
@@ -218,6 +221,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
 
 
                      <Stack justify={"space-between"}>
+                     <br></br>
                   {localStorage.getItem("instructorName") != null ? (
                     <Button onClick={cancelInstructor} bg={"#221409"} color={"white"} _hover={{bg:"#221409"}}>
                       Cancel
