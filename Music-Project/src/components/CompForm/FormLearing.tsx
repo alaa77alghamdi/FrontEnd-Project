@@ -41,7 +41,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Location</span>
-										<input className="form-control" required onChange={e=> setLocation(e.target.value)} />
+										<input className="form-control" onChange={e=> setLocation(e.target.value)}  />
 									</div>
 								</div>
 							</div>
@@ -76,7 +76,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Time </span>
-										<input className="form-control" onChange={e=> setTime(e.target.value)} required/>
+										<input className="form-control"   onChange={e=> setTime(e.target.value)} />
 									</div>
 								</div>
 				</div>
@@ -113,11 +113,11 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Note</span>
-										<input className="form-control"  onChange={e=> setnote(e.target.value)} />
+										<input className="form-control"  onChange={e=> setnote(e.target.value)} required />
 									</div>
 								</div>
 				</div>
-						<br></br>	 
+							 
               {/* end4 */}
 
 

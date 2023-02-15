@@ -31,7 +31,7 @@ export default function ConfirmPage() {
 									<br></br> 
 									<br></br>
 									<p className='hh'>
-								Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for a MUSIC BOOKING service has been receved .. We will contact with you.<br></br></p>
+								Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for a BOOK A MUSICIAN service has been receved .. We will contact with you.<br></br></p>
                                     
 									</div>
 								</div>

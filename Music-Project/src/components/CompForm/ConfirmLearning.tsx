@@ -19,7 +19,7 @@ function ConfirmLearning() {
 					<div className="booking-form">
 						<div className="booking-bg">
 							<div className="form-header">
-								<h2>EDUCATION A MUSIC</h2>
+								<h2 className='mueduction'>MUSIC EDUCATION</h2>
 								{/* <p>- Your reservation has been confirmed successfully </p> */}
 							</div>
 						</div>
@@ -31,7 +31,7 @@ function ConfirmLearning() {
 									<br></br> 
 									<br></br>
 									<p className='hh'>
-									Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for EDUCATION A MUSIC service has been received .. We will contact with you.<br></br>
+									Dear <span  style={{color:'#975A16',fontSize:'25px'}}>{name}</span> , <br></br>your requst for MUSIC EDUCATION service has been received .. We will contact with you.<br></br>
 									</p>
                                     
 									</div>
