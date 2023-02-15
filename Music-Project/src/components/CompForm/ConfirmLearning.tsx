@@ -2,10 +2,10 @@ import React from 'react'
 
 function ConfirmLearning() {
     const name=localStorage.getItem('name')
-	const location =localStorage.getItem('location')
-	const event =localStorage.getItem('event')
-	const time =localStorage.getItem('time')	
-	const note =localStorage.getItem('note')
+	const location =localStorage.getItem('locationLearning')
+	const event =localStorage.getItem('eventLearning')
+	const time =localStorage.getItem('timeLearning')	
+	const note =localStorage.getItem('noteLearning')
 		
 	
 
