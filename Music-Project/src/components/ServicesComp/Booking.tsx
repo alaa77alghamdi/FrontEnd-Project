@@ -11,7 +11,9 @@ function Booking( ) {
      <div className="header1" >
       <div className="headerContent1">
         <h1 className='title1' >Booking a Musician</h1> 
-            <h2 className='description1' >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas illum, repudiandae omnis voluptatem impedit provident quaerat sed nostrum reiciendis aspernatur ipsum deleniti laudantium ullam! </h2>
+            <h2 className='description1' >Music expresses that which cannot be put into words and that which cannot remain silent
+ </h2>
+
             </div>
           
       </div>

@@ -71,10 +71,7 @@ height={{ base: "3xl", md: "4xl", lg: "83vh" }}
           fontFamily= 'Quicksand, sans-serif;'
 
         >
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-    Eum animi voluptate deleniti praesentium est, aliquam sapiente 
-    laborum culpa eos consequuntur alias modi exercitationem, 
-    rerum ea explicabo assumenda ipsam mollitia totam.
+    We are a team that worked on making a platform  that combines booking musicians for concerts and teaching music to everyone, as well as selling used musical instruments to whomever needs them. Our goal is for our site to reach all those who are interested in music and its arts
         </chakra.p>
       </Flex>
       <Box  >
