@@ -92,7 +92,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
         paddingTop={30}
         fontFamily="Quicksand, sans-serif;"
       >
-        My Profile
+       {localStorage.getItem("name")}'s  Profile
       </Heading>
       <Center 
       
@@ -116,9 +116,8 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
           <Box p={6}>
             <Stack spacing={0} mb={5} align={"center"}>
               <Heading
-                fontSize={{ base: "20", md: "20", lg: "40" }}
+                fontSize={{ base: "40", md: "40", lg: "40" }}
                 fontWeight={1100}
-                paddingTop={4}
                 fontFamily="Quicksand, sans-serif;"
               >
                 {localStorage.getItem("name")}{" "}
@@ -127,7 +126,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                 color={"gray.500"}
                 paddingTop={8}
                 fontFamily="Quicksand, sans-serif;"
-              >
+                fontSize={{ base: "30", md: "30", lg: "30" }} >
                 {localStorage.getItem("email")}{" "}
               </Text>
             </Stack>
