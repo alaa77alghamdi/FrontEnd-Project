@@ -67,7 +67,7 @@ function BookingCard() {
         
                             <Stack align='center'
                             >
-                                <CardBody align='center'>
+                                <CardBody textAlign='center'>
                                 <Heading size='md'>{musician.name}</Heading>
         
                                 <Text py='2'>
@@ -135,7 +135,7 @@ function BookingCard() {
     
                         <Stack align='center'>
                             <CardBody 
-                            align='center'
+                            textAlign='center'
                             >
                             <Heading size='md'>{musician.name}</Heading>
     

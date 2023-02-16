@@ -11,32 +11,21 @@ import {
     CardFooter,
   } from '@chakra-ui/react';
   import { useNavigate } from 'react-router-dom';
-  import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useDisclosure,
-    
-  } from '@chakra-ui/react'
-  import { CheckCircleIcon } from '@chakra-ui/icons'
+ 
   import swal from 'sweetalert2'
 
   interface CardProp {
     img:string;
     name:string;
     desc: string;
-    price: string;
+    price: any;
 
  }
   
   export default function ProductSiple({img, name, desc, price}:CardProp ) {
     const navigate = useNavigate()
 //--------------------Modal-------------------
-    const { isOpen, onOpen, onClose } = useDisclosure()
+
 
   //   const viewCart =()=>{
   //         //redirect to profile
@@ -180,37 +169,7 @@ import {
           
         </Box>
       </Center>
-      <Modal isOpen={isOpen} onClose={onClose}         motionPreset='slideInBottom' isCentered>
-          <ModalOverlay />
-
-          <ModalContent >
-            <ModalHeader  align='center'>
-            <CheckCircleIcon boxSize={8} color='#221409' mt='5' />
-            </ModalHeader>
-            <ModalCloseButton />
-            <ModalBody align='center' mb='5'>
-              Instrument was added to the cart
-            </ModalBody>
-            <ModalFooter>
-              <Button 
-              bg='rgba(255, 255, 255, 0.5)'
-              _hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
-              color='white' 
-              mr={3} 
-              onClick={onClose}>
-                Continue Shopping
-              </Button>
-              <Button
-              // onClick={viewCart} 
-              variant='ghost'
-              _hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
-              color='white'
-              border='1px'
-              borderColor='gray.200'
-              >View Cart</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
+      
       </ChakraProvider>
     );
   }

@@ -17,8 +17,8 @@ export default function Store() {
             </div>
           
       </div>
-      <Container align='center' maxW={{md:'container.md', lg:'container.xl'}} >
-            <SimpleGrid columns={{ base: '1', md: '2', lg: '3' }}>
+      <Container textAlign='center' maxW={{md:'container.md', lg:'container.xl'}} >
+            <SimpleGrid columns={[  1, 2, 3 ]}>
               {
                 instruments.map(instrument =>{
                   return(
