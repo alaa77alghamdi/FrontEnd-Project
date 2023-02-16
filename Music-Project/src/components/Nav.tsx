@@ -42,6 +42,7 @@ export default function Nav() {
   }).then((result: { isConfirmed: any; }) => {
     if (result.isConfirmed) {
       localStorage.removeItem("name")
+      localStorage.clear();
       navigate("/");
     }
   })

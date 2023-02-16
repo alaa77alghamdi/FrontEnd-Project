@@ -55,7 +55,7 @@ export default function FormLearing() {
 								<div className="col-md-6">
 									<div className="form-group">
 										<span className="form-label"> Level </span>
-										<select className='timeoption' value ={time} onChange={e=> setTime(e.target.value)}>
+										<select className='timeoption' value ={level} onChange={e=> setlevel(e.target.value)}>
 											<option></option>
 											<option value="BEGINNER">BEGINNER</option>
 											<option value="INTERMEDIATE">INTERMEDIATE</option>
