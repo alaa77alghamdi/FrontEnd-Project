@@ -150,7 +150,7 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
       </Heading>
       <Center 
       
-      py= {{ base: "80px", md: "70px", lg: "150" }}>
+      py= {{ base: "140px", md: "140px", lg: "184" }}>
         <Box
           w={{ base: "150", md: "500", lg: "866px" }}
           padding= {{ base: "70px", md: "70px", lg: "70px" }}
