@@ -263,8 +263,6 @@ const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
                     {"  "}
                     {locationLearning}
                     <br></br>
-                    <span style={{fontWeight:'bold'}}>event:</span>  {"   "} {"  "} {eventLearning}
-                    <br></br>
                     <span style={{fontWeight:'bold'}}>time:</span>  {"   "} {"  "}
                     {timeLearning}
                     <br></br>
