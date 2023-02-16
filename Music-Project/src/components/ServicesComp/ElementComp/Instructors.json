@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "image":"https://img.freepik.com/free-photo/side-view-man-playing-piano_23-2150060706.jpg?w=1060&t=st=1676447053~exp=1676447653~hmac=baae309be7eef289e1f84a36b4ed87602aa74ceaf2a7e055ce945e38df205407",
+        "image":"https://images.unsplash.com/photo-1532959801411-cf28447984f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1590&q=60",
         "name": "Jorej Michle",
         "instruments":"Paino, Getar",
         "Description":"In our first lesson, I try to have a better understanding of your current level and your specific goals.For beginners, I usually start by teaching the basics of note reading, rhythm, and instrument technique, providing a strong foundation.My goal is to make your learning experience as flexible and enjoyable as possible.",
@@ -10,7 +10,7 @@
     },
     {
         "id":2,
-        "image":"https://img.freepik.com/free-photo/man-sitting-playing-guitar-chair_1150-24747.jpg?w=1060&t=st=1676447145~exp=1676447745~hmac=ebb4de127ef336a6a35b14a17ea695dc2b387b7a4fa76ba617f17ff5fa486680",
+        "image":"https://images.unsplash.com/photo-1611648822527-f13d606d13cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=60",
         "name": "Henry Daniel",
         "instruments":"Classical guitar",
         "Description":"You will learn proper techniques for holding and playing the instrument, reading music scores, and understanding music theory.",
@@ -19,19 +19,19 @@
     },
     {
         "id":2,
-        "image":"https://img.freepik.com/free-photo/side-view-male-musician-playing-violin_23-2148680305.jpg?w=1060&t=st=1676447208~exp=1676447808~hmac=3a8d926c91a21646b5f6ce5bee7af2c545dfc259896cdcbd8d56b90803ec7eb9",
+        "image":"https://images.unsplash.com/photo-1519139270028-ab664cf42264?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWNpYW4lMjBWaW9saW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "name": "Sebastian Logan",
-        "instruments":"Violin",
+        "instruments":"Cello",
         "Description":"In the first lesson, we will collaborate to set a learning plan tailored to your individual goals. Our learning will be based on contemporary academic programs . You will be introduced first to the notes, rhythm, and oriental scales. Next, you will learn how to coordinate and synchronize both hands while playing. ",
         "AvailableTime": "Thursday, Tuseday, Friday",
         "Price":100
     },
     {
         "id":3,
-        "image":"https://img.freepik.com/free-photo/trumpet-player-black-background_23-2147624321.jpg?w=1060&t=st=1676447306~exp=1676447906~hmac=306a798c18dc4573c93b8f4bf215a50ed013fe9d3feed85eb0d0998b71bfbda5",
-        "name": "Asher J",
-        "instruments":"Oboe, Saxophone",
-        "Description":" As an enthusiast for teaching, I am dedicated to providing a comfortable and tailored learning experience for each of my students. I believe that music is a powerful tool that enriches one's identity and can serve as a friend,therapist, and source of inspiration.During the lessons, you'll have the opportunity not only to improve your Oboe skills but also to find joy and satisfaction in every note, beat, and song.Let's get started!",
+        "image":"https://images.unsplash.com/photo-1602261192256-3a8503ae7343?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=60",
+        "name": "Elisa J",
+        "instruments":"Flute, Saxophone",
+        "Description":" As an enthusiast for teaching, I am dedicated to providing a comfortable and tailored learning experience for each of my students. I believe that music is a powerful tool that enriches one's identity and can serve as a friend,therapist, and source of inspiration.During the lessons, you'll have the opportunity not only to improve your Flute skills but also to find joy and satisfaction in every note, beat, and song.Let's get started!",
         "AvailableTime": "Monday, Wednesday, Saturday",
         "Price":200
     }
