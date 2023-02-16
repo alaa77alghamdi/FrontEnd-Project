@@ -71,13 +71,13 @@ import {
       text: 'Instrument was added to the cart',
       iconColor: '#221409',
       showCloseButton: true,
-      showCancelButton: true,
+      showCancelButton: false,
       focusConfirm: false,
       background: '#f3f1e8',
       confirmButtonColor: '#221409',
       cancelButtonColor:'#221409',
       // confirmButtonText: '<a href="/">OK</a>',
-      confirmButtonText: 'View Cart',
+      confirmButtonText: 'OK',
       cancelButtonText:
       'Continue Shopping',
   }).then((result: { isConfirmed: any; }) => {
