@@ -17,6 +17,8 @@ function FormBooking() {
 		localStorage.setItem('date',date)
 		localStorage.setItem('note',note)
 		 navigate('/confirmBooking')
+
+		 
 	}
   return (
 	
@@ -111,7 +113,7 @@ function FormBooking() {
 				
               {/* button */}
 							<div className="form-btn">
-								<button className="submit-btn"
+								<button type='submit' className="submit-btn"
 								 onClick={confirmBooking}>SEND</button>
 							</div>
 						</form>
