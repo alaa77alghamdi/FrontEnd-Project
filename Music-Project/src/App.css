@@ -226,18 +226,16 @@ footer li {
 
 /*-------------------------------HOME-------------------------------*/
 /*----------header----------*/
-/*
 .headerBg {
   height: 88vh;
-  background-image: url('./assets/header.jpeg');
+  background-image: url('./assets/cello.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-*/
-video {
+/* video {
   width: 100%;
-}
+} */
 .headerContent {
   position: absolute;
   top: 240px;
@@ -262,6 +260,7 @@ video {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   font-weight: 600;
+  color: #221c16;
 }
 .headerContent button:hover {
   background-color: rgba(255, 255, 255, 0.6);
@@ -302,6 +301,7 @@ main {
   font-size: 12px;
   font-weight: 600;
   margin: 40px;
+  color: #221c16;
 }
 .aboutSection button:hover {
   background-color: rgba(255, 255, 255, 0.6);
@@ -455,14 +455,15 @@ main {
   /*-------------------------------HOME-------------------------------1024*/
   /*----------header----------*/
   .headerContent {
-    top: 200px;
+    top: 230px;
+    left: 100px;
   }
   .headerContent div  {
-    font-size: 80px;
+    font-size: 90px;
   }
   .headerContent button {
-    padding: 13px 20px;
-    font-size: 12px;
+    padding: 13px 25px;
+    font-size: 13px;
   }
 
   /*----------about section----------*/
@@ -563,15 +564,15 @@ main {
   /*-------------------------------HOME-------------------------------*/
   /*----------header----------*/
   .headerContent {
-    top: 160px;
-    left: 100px;
+    top: 200px;
+    left: 80px;
   }
   .headerContent div  {
-    font-size: 60px;
+    font-size: 70px;
   }
   .headerContent button {
-    padding: 10px 18px;
-    font-size: 8px;
+    padding: 11px 22px;
+    font-size: 10px;
   }
 
   /*----------about section----------*/
@@ -713,16 +714,15 @@ main {
   /*-------------------------------HOME-------------------------------*/
   /*----------header----------*/
   .headerContent {
-    top: 90px;
+    top: 150px;
     left: 40px;
   }
   .headerContent div  {
-    font-size: 30px;
-    border-radius: 10px;
+    font-size: 50px;
   }
   .headerContent button {
-    padding: 6px 10px;
-    font-size: 5px;
+    padding: 9px 15px;
+    font-size: 8px;
   }
 
   /*----------about section----------*/
@@ -837,4 +837,13 @@ main {
     padding: 10px 16px;
     font-size: 10px;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  /*-------------------------------HOME-------------------------------320*/
+    /*----------service section----------*/
+    .serviceSection img {
+      height: 120px;
+      width: 210px;
+    }
 }
