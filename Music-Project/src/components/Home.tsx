@@ -67,7 +67,7 @@ export default function Home() {
     <div>
       {/*----------HEADER----------*/}
       <header className='headerBg'>
-        {/* <video autoPlay loop muted>
+        {/* <video autoPlay loop muted >
           <source src={cello} type='video/mp4'/>
         </video> */}
         <div className='headerContent'>
